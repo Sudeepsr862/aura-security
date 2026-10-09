@@ -5,11 +5,12 @@
 
 import Database from 'better-sqlite3';
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 import { assessRisk } from '../risk/riskEngine.js';
+import { importAllReferenceDatasets } from '../discovery/datasetLoader.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -25,7 +26,10 @@ export function openDb(): Database.Database {
 
 // ── Apply schema ──────────────────────────────────────────────────────────────
 export function applySchema(db: Database.Database): void {
-  const sql = readFileSync(join(__dirname, 'schema.sql'), 'utf-8');
+  const sqlFile = existsSync(join(__dirname, 'schema.sql'))
+    ? join(__dirname, 'schema.sql')
+    : join(__dirname, '../../server/db/schema.sql');
+  const sql = readFileSync(sqlFile, 'utf-8');
   db.exec(sql);
 
   // Auto-migrate columns for existing database
@@ -707,6 +711,91 @@ export function seedDemo(db: Database.Database): void {
     VALUES (@rule_name, @data_types, @allowed_tools, @blocked_tools, @action, @description)
   `);
   for (const r of sharingRules) insertSharingRule.run(r);
+
+  // ── Extension AI Service Catalog Seed ───────────────────────────────────────
+  const defaultSites = [
+    { service_key: 'openai_chatgpt', name: 'OpenAI ChatGPT', domain: 'chatgpt.com', category: 'cloud', adapter: 'chatgpt' },
+    { service_key: 'openai_legacy', name: 'OpenAI (Legacy Web)', domain: 'chat.openai.com', category: 'cloud', adapter: 'chatgpt' },
+    { service_key: 'anthropic_claude', name: 'Anthropic Claude', domain: 'claude.ai', category: 'cloud', adapter: 'claude' },
+    { service_key: 'google_gemini', name: 'Google Gemini', domain: 'gemini.google.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'google_aistudio', name: 'Google AI Studio', domain: 'aistudio.google.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'microsoft_copilot', name: 'Microsoft Copilot', domain: 'copilot.microsoft.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'cohere_coral', name: 'Cohere Coral', domain: 'coral.cohere.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'groq_chat', name: 'Groq Cloud Console', domain: 'groq.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'mistral_lechat', name: 'Mistral Le Chat', domain: 'chat.mistral.ai', category: 'cloud', adapter: 'generic' },
+    { service_key: 'deepseek_chat', name: 'DeepSeek Chat', domain: 'chat.deepseek.com', category: 'cloud', adapter: 'generic' },
+    { service_key: 'huggingface_chat', name: 'Hugging Face Chat', domain: 'huggingface.co', category: 'cloud', adapter: 'generic' },
+    { service_key: 'ollama_local', name: 'Ollama Web API', domain: 'localhost:11434', category: 'local', adapter: 'local_webui' },
+    { service_key: 'lm_studio_local', name: 'LM Studio Local Server', domain: 'localhost:1234', category: 'local', adapter: 'local_webui' },
+    { service_key: 'vllm_local', name: 'vLLM Local OpenAI Server', domain: 'localhost:8000', category: 'local', adapter: 'local_webui' },
+    { service_key: 'textgen_webui', name: 'Text Generation WebUI', domain: 'localhost:7860', category: 'local', adapter: 'local_webui' },
+    { service_key: 'localai', name: 'LocalAI Server', domain: 'localhost:8080', category: 'local', adapter: 'local_webui' },
+    { service_key: 'aura_demo_sandbox', name: 'AURA AI Test Sandbox', domain: 'localhost:5174', category: 'custom', adapter: 'generic' },
+  ];
+
+  const insertSite = db.prepare(`
+    INSERT OR IGNORE INTO extension_sites (service_key, name, domain, category, adapter, is_enabled, status)
+    VALUES (@service_key, @name, @domain, @category, @adapter, 1, 'protected')
+  `);
+  for (const s of defaultSites) insertSite.run(s);
+
+  // ── Reference CSV Datasets Ingestion ─────────────────────────────────────────
+  try {
+    importAllReferenceDatasets(db);
+  } catch (err: any) {
+    console.warn('⚠️  Could not import reference datasets:', err?.message);
+  }
+
+  // ── Seed Sample Live Extension Events (if empty) ────────────────────────────
+  const existingEvents = (db.prepare(`SELECT COUNT(*) as c FROM extension_events`).get() as any).c;
+  if (existingEvents === 0) {
+    const insertEv = db.prepare(`
+      INSERT INTO extension_events (
+        event_time, employee_id, ai_service, domain, event_type, file_name,
+        detected_category, matched_rule, action_taken, risk_level, review_status
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+
+    insertEv.run(
+      '2026-10-10 01:15:22',
+      'EMP_001',
+      'OpenAI ChatGPT',
+      'chatgpt.com',
+      'message_send',
+      null,
+      'API Keys & Access Tokens',
+      'Block API Keys to External AI',
+      'blocked',
+      'critical',
+      'Pending'
+    );
+    insertEv.run(
+      '2026-10-10 02:22:45',
+      'EMP_058',
+      'Microsoft Copilot',
+      'copilot.microsoft.com',
+      'file_upload',
+      'customer_contacts.csv',
+      'Email Address (PII)',
+      'Warn on PII to Public Tools',
+      'warned',
+      'high',
+      'Expected'
+    );
+    insertEv.run(
+      '2026-10-10 02:45:10',
+      'EMP_020',
+      'Anthropic Claude',
+      'claude.ai',
+      'message_send',
+      null,
+      'Password-like Assignments',
+      'Prohibit Database Credentials',
+      'blocked',
+      'critical',
+      'Investigate'
+    );
+  }
 
   // ── Initial audit entry ───────────────────────────────────────────────────────
   const existingAudit = db.prepare(`SELECT COUNT(*) as cnt FROM audit_log`).get() as { cnt: number };

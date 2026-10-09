@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "AURA — Browser AI Guard",
+  "version": "1.0.0",
+  "description": "Local pre-transfer inspection and privacy protection across browser-based AI websites and local models.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "optional_permissions": [
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:3001/*",
+    "http://localhost:5174/*",
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://copilot.microsoft.com/*",
+    "http://localhost:11434/*",
+    "http://localhost:1234/*",
+    "http://localhost:8000/*",
+    "http://localhost:7860/*",
+    "http://localhost:8080/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://copilot.microsoft.com/*",
+        "http://localhost:11434/*",
+        "http://localhost:1234/*",
+        "http://localhost:8000/*",
+        "http://localhost:7860/*",
+        "http://localhost:8080/*",
+        "http://localhost:5174/*",
+        "http://127.0.0.1:5174/*"
+      ],
+      "css": ["modal.css"],
+      "js": ["rules.js", "overlay.js", "detector.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AURA AI Guard"
+  },
+  "options_page": "options.html"
+}

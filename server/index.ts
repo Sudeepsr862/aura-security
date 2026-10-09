@@ -23,6 +23,7 @@ import { promptLabRouter }  from './routes/promptLab.js';
 import { riskRouter }       from './routes/risk.js';
 import { auditRouter }      from './routes/audit.js';
 import { dataGuardRouter }  from './routes/dataGuard.js';
+import { extensionRouter }  from './routes/extension.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = parseInt(process.env.AURA_PORT ?? '3001', 10);
@@ -80,6 +81,7 @@ app.use('/api/prompt-lab', promptLabRouter);
 app.use('/api/risk',       riskRouter);
 app.use('/api/audit',      auditRouter);
 app.use('/api/data-guard', dataGuardRouter);
+app.use('/api/extension',  extensionRouter);
 
 // ── Error handler ─────────────────────────────────────────────────────────────
 // Never expose stack traces or request bodies in the response.

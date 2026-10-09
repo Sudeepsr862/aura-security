@@ -666,6 +666,57 @@ export const api = {
 
   incomingHistory: () =>
     call<IncomingHistoryResponse>('/data-guard/incoming-history'),
+
+  // ── Browser AI Extension & Dataset APIs ───────────────────────────────────
+
+  extensionSites: () =>
+    call<ExtensionSitesResponse>('/extension/sites'),
+
+  addExtensionSite: (site: { name: string; domain: string; category?: string; adapter?: string }) =>
+    call<{ success: boolean; id: number; message: string }>('/extension/sites', {
+      method: 'POST',
+      body: JSON.stringify(site),
+    }),
+
+  updateExtensionSite: (id: number, params: { is_enabled?: boolean; status?: string }) =>
+    call<{ success: boolean; message: string }>(`/extension/sites/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(params),
+    }),
+
+  deleteExtensionSite: (id: number) =>
+    call<{ success: boolean; message: string }>(`/extension/sites/${id}`, {
+      method: 'DELETE',
+    }),
+
+  extensionEvents: (filters?: { risk?: string; service?: string; review?: string }) => {
+    const params = new URLSearchParams();
+    if (filters?.risk) params.set('risk', filters.risk);
+    if (filters?.service) params.set('service', filters.service);
+    if (filters?.review) params.set('review', filters.review);
+    const qs = params.toString();
+    return call<ExtensionEventsResponse>(`/extension/events${qs ? `?${qs}` : ''}`);
+  },
+
+  reviewExtensionEvent: (id: number, review_status: 'Expected' | 'Investigate' | 'Policy exception', reviewer_note?: string) =>
+    call<{ success: boolean; message: string }>(`/extension/events/${id}/review`, {
+      method: 'PATCH',
+      body: JSON.stringify({ review_status, reviewer_note }),
+    }),
+
+  extensionSummary: () =>
+    call<ExtensionDashboardSummaryResponse>('/extension/dashboard-summary'),
+
+  datasetHistory: (filters?: { service?: string; risk?: string }) => {
+    const params = new URLSearchParams();
+    if (filters?.service) params.set('service', filters.service);
+    if (filters?.risk) params.set('risk', filters.risk);
+    const qs = params.toString();
+    return call<DatasetHistoryResponse>(`/extension/datasets/history${qs ? `?${qs}` : ''}`);
+  },
+
+  datasetIncidents: () =>
+    call<DatasetIncidentsResponse>('/extension/datasets/incidents'),
 };
 
 // ── Phase 7 Types ──────────────────────────────────────────────────────────
@@ -845,3 +896,131 @@ export interface IncomingHistoryResponse {
   inspections: IncomingHistoryRow[];
   privacyNotice: string;
 }
+
+// ── Extension & Reference Dataset Types ─────────────────────────────────────
+
+export interface ExtensionSiteItem {
+  id: number;
+  service_key: string;
+  name: string;
+  domain: string;
+  category: 'cloud' | 'local' | 'custom';
+  adapter: string;
+  is_enabled: boolean;
+  last_active_at: string | null;
+  status: 'protected' | 'inactive' | 'unsupported' | 'changed';
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ExtensionSitesResponse {
+  sites: ExtensionSiteItem[];
+  totalSites: number;
+  activeProtectedCount: number;
+  canEdit: boolean;
+}
+
+export interface ExtensionEventItem {
+  id: number;
+  event_time: string;
+  employee_id: string;
+  ai_service: string;
+  domain: string;
+  event_type: 'message_send' | 'file_upload';
+  file_name: string | null;
+  detected_category: string;
+  matched_rule: string;
+  action_taken: 'blocked' | 'warned' | 'allowed';
+  risk_level: 'low' | 'medium' | 'high' | 'critical';
+  review_status: 'Pending' | 'Expected' | 'Investigate' | 'Policy exception';
+  reviewer_note: string | null;
+  reviewed_by: string | null;
+  reviewed_at: string | null;
+  is_live: number;
+  employee_name?: string;
+  department?: string;
+  job_role?: string;
+}
+
+export interface ExtensionEventsResponse {
+  events: ExtensionEventItem[];
+  total: number;
+  canReview: boolean;
+}
+
+export interface ExtensionDashboardSummaryResponse {
+  catalog: {
+    totalSites: number;
+    protectedSites: number;
+    inactiveSites: number;
+    unsupportedSites: number;
+  };
+  liveEvents: {
+    total: number;
+    blocked: number;
+    warned: number;
+    critical: number;
+    high: number;
+    pendingReview: number;
+  };
+  datasets: {
+    employees: number;
+    aiLogs: number;
+    assets: number;
+    networkLogs: number;
+    incidents: number;
+  };
+}
+
+export interface DatasetHistoryRecord {
+  log_id: string;
+  timestamp: string;
+  employee_id: string;
+  ai_service: string;
+  destination_domain: string;
+  prompt_category: string;
+  inspection_result: string;
+  service_status: string;
+  request_size: string;
+  employee_name: string;
+  department: string;
+  job_role: string;
+  device_trust_status: string;
+  approved_ai_services: string;
+  data_access_level: string;
+  is_live: 0;
+  source: 'dataset_sample';
+}
+
+export interface DatasetHistoryResponse {
+  records: DatasetHistoryRecord[];
+  total: number;
+  disclaimer: string;
+}
+
+export interface DatasetIncidentRecord {
+  incident_id: string;
+  timestamp: string;
+  employee_id: string;
+  related_event_ids: string;
+  detected_categories: string;
+  policy_violation: string;
+  risk_score: number;
+  severity: string;
+  explanation: string;
+  recommended_action: string;
+  response_status: string;
+  analyst_resolution: string;
+  employee_name: string;
+  department: string;
+  job_role: string;
+  device_trust_status: string;
+  is_live: 0;
+  source: 'dataset_sample';
+}
+
+export interface DatasetIncidentsResponse {
+  incidents: DatasetIncidentRecord[];
+  total: number;
+}
+

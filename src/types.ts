@@ -6,6 +6,8 @@ export type NavPage =
   | 'ai-inventory'
   | 'prompt-lab'
   | 'data-guard'
+  | 'extension-guard'
+  | 'demo-ai-chat'
   | 'data-risk'
   | 'incidents'
   | 'governance';

@@ -1,0 +1,201 @@
+employee_id,full_name,department,job_role,device_id,device_trust_status,approved_ai_services,data_access_level,department_policy
+EMP_001,Srujan Nair,Engineering,Software Engineering Intern,DEV_ENG_001,BYOD (Untrusted),None,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_002,Sudeep Petrov,Engineering,Senior Software Engineer,DEV_ENG_002,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_003,Thrishul Mansoor,Cybersecurity,Security Analyst,DEV_SEC_003,Corporate Managed (Compliant),"Internal Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_004,Anita Morales,Human Resources,HR Executive,DEV_HR_004,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_005,Tariq Torres,Finance,Payroll Specialist,DEV_FIN_005,BYOD (Untrusted),None,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_006,Valentina Vasquez,Data & Analytics,Data Scientist,DEV_DAT_006,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_007,Liam Singh,Marketing & Sales,Marketing Specialist,DEV_MKT_007,BYOD (Untrusted),Approved Commercial Tools Only,Public Data Only,Approved Commercial Tools Only
+EMP_008,Fatima Alvarez,Legal & Compliance,Privacy Officer,DEV_LEG_008,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_009,Mateo Hegde,Engineering,DevOps Engineer,DEV_ENG_009,BYOD (Untrusted),None,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_010,Charlotte Miller,Finance,Finance Director,DEV_FIN_010,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_011,Gabriel Gomez,Legal & Compliance,Compliance Manager,DEV_LEG_011,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_012,Zhen Reddy,Engineering,Backend Developer,DEV_ENG_012,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Local LLM Audit
+EMP_013,Habiba Rao,Engineering,QA Specialist,DEV_ENG_013,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Local LLM Audit
+EMP_014,Koa Weber,Data & Analytics,Data Scientist,DEV_DAT_014,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_015,Gabriela Mansoor,Cybersecurity,IAM Engineer,DEV_CYB_015,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_016,Neha Gupta,Engineering,QA Specialist,DEV_ENG_016,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_017,Jayden Torres,Engineering,QA Specialist,DEV_ENG_017,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_018,Esteban Torres,Data & Analytics,Data Scientist,DEV_DAT_018,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_019,Hiroshi Wilson,Cybersecurity,Penetration Tester,DEV_CYB_019,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_020,Rafael Tanaka,Marketing & Sales,Marketing Specialist,DEV_MAR_020,Corporate Managed (Compliant),None,Public Data Only,Approved Commercial Tools Only
+EMP_021,Luke Patel,Marketing & Sales,Content Strategist,DEV_MAR_021,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_022,Nikolai Miller,Engineering,Senior Software Engineer,DEV_ENG_022,Corporate Managed (Compliant),None,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_023,Sonia Sato,Marketing & Sales,SEO Lead,DEV_MAR_023,Corporate Managed (Compliant),Microsoft Copilot,Public Data Only,Approved Commercial Tools Only
+EMP_024,Emma Sato,Human Resources,Compensation Specialist,DEV_HUM_024,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Copilot Approved / PII Shielding Required
+EMP_025,Carlos Khan,Legal & Compliance,Privacy Officer,DEV_LEG_025,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_026,Arjun Al-Maktoum,Human Resources,Talent Recruiter,DEV_HUM_026,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_027,Rahul Verma,Human Resources,HR Executive,DEV_HUM_027,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_028,Anja Müller,Human Resources,Talent Recruiter,DEV_HUM_028,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_029,Pooja Gomez,Human Resources,HRBP,DEV_HUM_029,BYOD (Untrusted),Internal Azure OpenAI,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_030,Ethan Chawla,Data & Analytics,BI Analyst,DEV_DAT_030,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_031,Gonzalo Petrov,Marketing & Sales,Marketing Specialist,DEV_MAR_031,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_032,Hana Gupta,Engineering,Software Engineering Intern,DEV_ENG_032,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Local LLM Audit
+EMP_033,Jan Müller,Engineering,Senior Software Engineer,DEV_ENG_033,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Local LLM Audit
+EMP_034,Ava Alvarez,Data & Analytics,Data Scientist,DEV_DAT_034,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_035,Priya Gupta,Cybersecurity,Penetration Tester,DEV_CYB_035,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero Public LLM / Internal Gateway Only
+EMP_036,Mei-Ling Bhat,Data & Analytics,Data Engineer,DEV_DAT_036,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_037,Bhavna Mehta,Human Resources,Compensation Specialist,DEV_HUM_037,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_038,Javier Rodriguez,Finance,Payroll Specialist,DEV_FIN_038,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_039,Aditya Mehta,Cybersecurity,IAM Engineer,DEV_CYB_039,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_040,Tarun Verma,Legal & Compliance,Legal Counsel,DEV_LEG_040,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_041,Lukas Kulkarni,Finance,Accountant,DEV_FIN_041,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_042,Scarlett Weber,Engineering,Backend Developer,DEV_ENG_042,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_043,Emily Ortiz,Human Resources,Compensation Specialist,DEV_HUM_043,BYOD (Untrusted),Enterprise Gemini,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_044,Bao Chawla,Marketing & Sales,Content Strategist,DEV_MAR_044,BYOD (Untrusted),Enterprise Gemini,Public Data Only,Approved Commercial Tools Only
+EMP_045,Dev Sr,Cybersecurity,Penetration Tester,DEV_CYB_045,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Zero Public LLM / Internal Gateway Only
+EMP_046,Kenji Ruiz,Marketing & Sales,Content Strategist,DEV_MAR_046,Corporate Managed (Compliant),Enterprise Gemini,Internal Corporate Data,Approved Commercial Tools Only
+EMP_047,Yuki Weber,Engineering,DevOps Engineer,DEV_ENG_047,Corporate Managed (Compliant),Enterprise Gemini,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_048,Carter Hegde,Marketing & Sales,Content Strategist,DEV_MAR_048,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_049,Rohan Bhat,Marketing & Sales,Marketing Specialist,DEV_MAR_049,BYOD (Untrusted),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_050,Ingrid Miller,Legal & Compliance,Privacy Officer,DEV_LEG_050,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Compliance Review Required
+EMP_051,Stefan Mehta,Cybersecurity,Penetration Tester,DEV_CYB_051,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_052,Logan Sato,Data & Analytics,BI Analyst,DEV_DAT_052,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_053,Isabel Al-Falasi,Cybersecurity,Penetration Tester,DEV_CYB_053,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Zero Public LLM / Internal Gateway Only
+EMP_054,Kareem Tanaka,Human Resources,Talent Recruiter,DEV_HUM_054,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_055,Chloe Johnson,Human Resources,HRBP,DEV_HUM_055,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_056,Camila Al-Hashimi,Data & Analytics,BI Analyst,DEV_DAT_056,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_057,Samira Singh,Finance,Finance Director,DEV_FIN_057,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_058,Salama Hegde,Finance,Financial Analyst,DEV_FIN_058,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_059,Yasmin Al-Mansoori,Legal & Compliance,Compliance Manager,DEV_LEG_059,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_060,Henrik Al-Maktoum,Marketing & Sales,Content Strategist,DEV_MAR_060,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_061,Olivia Hassan,Data & Analytics,Data Scientist,DEV_DAT_061,Corporate Managed (Outdated Patch),Enterprise Gemini,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_062,Bettina Reddy,Marketing & Sales,Content Strategist,DEV_MAR_062,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_063,Linh Hassan,Marketing & Sales,Marketing Specialist,DEV_MAR_063,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Internal Corporate Data,Approved Commercial Tools Only
+EMP_064,Varun Alvarez,Legal & Compliance,Compliance Manager,DEV_LEG_064,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_065,Zayed Rao,Marketing & Sales,Marketing Specialist,DEV_MAR_065,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_066,Nasser Vasquez,Human Resources,Compensation Specialist,DEV_HUM_066,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_067,Rishabh Taylor,Cybersecurity,IAM Engineer,DEV_CYB_067,Corporate Managed (Compliant),None,Confidential (Financials / PII),Zero Public LLM / Internal Gateway Only
+EMP_068,Dominik Morales,Finance,Finance Director,DEV_FIN_068,Corporate Managed (Outdated Patch),Microsoft Copilot,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_069,Sakura Ruiz,Marketing & Sales,SEO Lead,DEV_MAR_069,Corporate Managed (Compliant),Enterprise Gemini,Public Data Only,Approved Commercial Tools Only
+EMP_070,Renata Bhat,Marketing & Sales,SEO Lead,DEV_MAR_070,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_071,Daniel Shenoy,Cybersecurity,Penetration Tester,DEV_CYB_071,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_072,Valeria Kulkarni,Cybersecurity,IAM Engineer,DEV_CYB_072,Corporate Managed (Compliant),Enterprise Gemini,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_073,Divya Davis,Data & Analytics,BI Analyst,DEV_DAT_073,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_074,Karan Dubois,Marketing & Sales,Marketing Specialist,DEV_MAR_074,Corporate Managed (Outdated Patch),Enterprise Gemini,Internal Corporate Data,Approved Commercial Tools Only
+EMP_075,Wei Rao,Data & Analytics,MLOps Engineer,DEV_DAT_075,Corporate Managed (Outdated Patch),"Azure OpenAI, Copilot",Public Data Only,Internal Azure OpenAI Only
+EMP_076,Saskia Davis,Human Resources,Talent Recruiter,DEV_HUM_076,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_077,Chen Jones,Data & Analytics,BI Analyst,DEV_DAT_077,Corporate Managed (Outdated Patch),Enterprise Gemini,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_078,Avery Hassan,Human Resources,HR Executive,DEV_HUM_078,BYOD (Untrusted),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_079,Omar Patel,Legal & Compliance,Compliance Manager,DEV_LEG_079,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_080,Martina Jones,Data & Analytics,Data Engineer,DEV_DAT_080,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_081,Noah Bhat,Marketing & Sales,SEO Lead,DEV_MAR_081,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_082,Zubair Mansoor,Engineering,Backend Developer,DEV_ENG_082,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Strict Local LLM Audit
+EMP_083,Zoey N,Marketing & Sales,Marketing Specialist,DEV_MAR_083,BYOD (Untrusted),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_084,James Kulkarni,Cybersecurity,SOC Lead,DEV_CYB_084,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Zero Public LLM / Internal Gateway Only
+EMP_085,Kaitlyn Taylor,Legal & Compliance,Compliance Manager,DEV_LEG_085,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_086,Mariam Ruiz,Legal & Compliance,Legal Counsel,DEV_LEG_086,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_087,Diego Khan,Engineering,Backend Developer,DEV_ENG_087,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_088,Amina Alvarez,Cybersecurity,Security Analyst,DEV_CYB_088,Corporate Managed (Compliant),Enterprise Gemini,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_089,Paulina Vasquez,Marketing & Sales,Account Executive,DEV_MAR_089,Corporate Managed (Outdated Patch),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_090,Astrid Al-Falasi,Marketing & Sales,Marketing Specialist,DEV_MAR_090,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_091,Anushka Al-Hashimi,Legal & Compliance,Compliance Manager,DEV_LEG_091,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_092,Siddharth Wilson,Data & Analytics,BI Analyst,DEV_DAT_092,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_093,Freja Fernandez,Data & Analytics,BI Analyst,DEV_DAT_093,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_094,Elena Smith,Marketing & Sales,Content Strategist,DEV_MAR_094,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_095,Ren Chawla,Marketing & Sales,SEO Lead,DEV_MAR_095,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_096,Elizabeth Al-Nuaimi,Marketing & Sales,Account Executive,DEV_MAR_096,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_097,Aisha Johnson,Data & Analytics,MLOps Engineer,DEV_DAT_097,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_098,Giulia Chawla,Legal & Compliance,Compliance Manager,DEV_LEG_098,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_099,Bilal Fernandez,Legal & Compliance,Compliance Manager,DEV_LEG_099,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_100,Viktor Miller,Legal & Compliance,Legal Counsel,DEV_LEG_100,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_101,Caleb Al-Zahra,Data & Analytics,BI Analyst,DEV_DAT_101,BYOD (Untrusted),Microsoft Copilot,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_102,Isha Taylor,Data & Analytics,MLOps Engineer,DEV_DAT_102,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_103,Tatsuya Deshmukh,Legal & Compliance,Privacy Officer,DEV_LEG_103,BYOD (Untrusted),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_104,Santiago Ruiz,Finance,Payroll Specialist,DEV_FIN_104,Corporate Managed (Outdated Patch),None,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_105,Isabella Shenoy,Engineering,Senior Software Engineer,DEV_ENG_105,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_106,Kai Alvarez,Human Resources,Talent Recruiter,DEV_HUM_106,Corporate Managed (Compliant),None,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_107,Preeti Vasquez,Cybersecurity,IAM Engineer,DEV_CYB_107,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_108,Eun-ji Al-Maktoum,Finance,Payroll Specialist,DEV_FIN_108,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_109,Latifa Al-Maktoum,Engineering,AI Architect,DEV_ENG_109,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Local LLM Audit
+EMP_110,Zaid Sharma,Cybersecurity,SOC Lead,DEV_CYB_110,Corporate Managed (Outdated Patch),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_111,Sofia Chawla,Engineering,Software Engineering Intern,DEV_ENG_111,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Strict Local LLM Audit
+EMP_112,Fernando Reddy,Marketing & Sales,SEO Lead,DEV_MAR_112,Corporate Managed (Compliant),Microsoft Copilot,Public Data Only,Approved Commercial Tools Only
+EMP_113,Jian Wilson,Data & Analytics,Data Scientist,DEV_DAT_113,Corporate Managed (Compliant),Enterprise Gemini,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_114,Andres Nair,Legal & Compliance,Legal Counsel,DEV_LEG_114,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_115,Lin Siddiqui,Engineering,Senior Software Engineer,DEV_ENG_115,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Local LLM Audit
+EMP_116,Alejandro Shenoy,Engineering,Senior Software Engineer,DEV_ENG_116,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Local LLM Audit
+EMP_117,Kunal Verma,Legal & Compliance,Legal Counsel,DEV_LEG_117,BYOD (Untrusted),Enterprise Gemini,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_118,Lucas Gomez,Marketing & Sales,Content Strategist,DEV_MAR_118,Corporate Managed (Compliant),Microsoft Copilot,Public Data Only,Approved Commercial Tools Only
+EMP_119,Alessia Novak,Data & Analytics,Data Engineer,DEV_DAT_119,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_120,Joaquin Ruiz,Marketing & Sales,Account Executive,DEV_MAR_120,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_121,Matteo Miller,Data & Analytics,BI Analyst,DEV_DAT_121,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_122,Rodrigo Ruiz,Data & Analytics,MLOps Engineer,DEV_DAT_122,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_123,Carmen Weber,Human Resources,HR Executive,DEV_HUM_123,BYOD (Untrusted),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_124,Sneha N,Marketing & Sales,Content Strategist,DEV_MAR_124,Corporate Managed (Compliant),Microsoft Copilot,Public Data Only,Approved Commercial Tools Only
+EMP_125,Riley Kumar,Human Resources,Compensation Specialist,DEV_HUM_125,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_126,Ananya Williams,Finance,Payroll Specialist,DEV_FIN_126,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_127,Filip Davis,Legal & Compliance,Compliance Manager,DEV_LEG_127,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Internal Corporate Data,Strict Compliance Review Required
+EMP_128,Lucia Siddiqui,Engineering,DevOps Engineer,DEV_ENG_128,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_129,Reem Ortiz,Finance,Financial Analyst,DEV_FIN_129,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_130,Julian Singh,Human Resources,HRBP,DEV_HUM_130,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_131,Mia Sharma,Cybersecurity,Penetration Tester,DEV_CYB_131,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_132,Youssef Vasquez,Finance,Financial Analyst,DEV_FIN_132,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_133,Sultan Alvarez,Cybersecurity,Penetration Tester,DEV_CYB_133,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_134,Hessa Johansson,Engineering,DevOps Engineer,DEV_ENG_134,BYOD (Untrusted),Microsoft Copilot,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_135,Matías Petrov,Legal & Compliance,Compliance Manager,DEV_LEG_135,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Strict Compliance Review Required
+EMP_136,Hyeon Al-Maktoum,Cybersecurity,IAM Engineer,DEV_CYB_136,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Zero Public LLM / Internal Gateway Only
+EMP_137,Mila Al-Hashimi,Legal & Compliance,Legal Counsel,DEV_LEG_137,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Internal Corporate Data,Strict Compliance Review Required
+EMP_138,Tanvi Davis,Data & Analytics,MLOps Engineer,DEV_DAT_138,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_139,Ji-hoon Khan,Human Resources,Compensation Specialist,DEV_HUM_139,Corporate Managed (Outdated Patch),Microsoft Copilot,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_140,Marco Johnson,Human Resources,Compensation Specialist,DEV_HUM_140,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_141,Ryan Vasquez,Cybersecurity,IAM Engineer,DEV_CYB_141,Corporate Managed (Compliant),Enterprise Gemini,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_142,Jacob Ruiz,Finance,Finance Director,DEV_FIN_142,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_143,Helena Kulkarni,Finance,Financial Analyst,DEV_FIN_143,Corporate Managed (Compliant),None,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_144,Rhea Gupta,Marketing & Sales,SEO Lead,DEV_MAR_144,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Internal Corporate Data,Approved Commercial Tools Only
+EMP_145,Sophia Kulkarni,Finance,Accountant,DEV_FIN_145,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_146,Khaled Hassan,Legal & Compliance,Compliance Manager,DEV_LEG_146,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Internal Corporate Data,Strict Compliance Review Required
+EMP_147,Victoria Nielsen,Human Resources,Compensation Specialist,DEV_HUM_147,BYOD (Untrusted),Microsoft Copilot,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_148,Sven Al-Nuaimi,Marketing & Sales,Marketing Specialist,DEV_MAR_148,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_149,Amit Shenoy,Cybersecurity,Security Analyst,DEV_CYB_149,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero Public LLM / Internal Gateway Only
+EMP_150,Faisal Weber,Engineering,DevOps Engineer,DEV_ENG_150,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_151,Simran Smith,Marketing & Sales,Marketing Specialist,DEV_MAR_151,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_152,Daniela Al-Zahra,Finance,Accountant,DEV_FIN_152,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_153,Mariana Hassan,Legal & Compliance,Legal Counsel,DEV_LEG_153,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_154,Kavya Rodriguez,Data & Analytics,BI Analyst,DEV_DAT_154,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_155,Ella Dubois,Data & Analytics,Data Engineer,DEV_DAT_155,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Public Data Only,Internal Azure OpenAI Only
+EMP_156,Hamdan Hegde,Legal & Compliance,Compliance Manager,DEV_LEG_156,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_157,Layla Jones,Marketing & Sales,SEO Lead,DEV_MAR_157,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_158,Nikhil Shenoy,Legal & Compliance,Compliance Manager,DEV_LEG_158,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_159,Mona Rao,Human Resources,HR Executive,DEV_HUM_159,BYOD (Untrusted),Enterprise Gemini,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_160,Min-jun Dubois,Data & Analytics,Data Engineer,DEV_DAT_160,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_161,Aris Hassan,Data & Analytics,Data Engineer,DEV_DAT_161,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_162,Rashid Hegde,Marketing & Sales,SEO Lead,DEV_MAR_162,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_163,Soo-jin Novak,Data & Analytics,MLOps Engineer,DEV_DAT_163,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_164,Meera Mansoor,Data & Analytics,MLOps Engineer,DEV_DAT_164,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Internal Corporate Data,Internal Azure OpenAI Only
+EMP_165,Dimitri Al-Maktoum,Marketing & Sales,Account Executive,DEV_MAR_165,Corporate Managed (Outdated Patch),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_166,Noora Verma,Cybersecurity,SOC Lead,DEV_CYB_166,Corporate Managed (Outdated Patch),Enterprise Gemini,Public Data Only,Zero Public LLM / Internal Gateway Only
+EMP_167,Aoi Nielsen,Marketing & Sales,Account Executive,DEV_MAR_167,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_168,Alexander Deshmukh,Finance,Payroll Specialist,DEV_FIN_168,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_169,Grace Lindqvist,Legal & Compliance,Compliance Manager,DEV_LEG_169,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_170,Elin Müller,Human Resources,HRBP,DEV_HUM_170,BYOD (Untrusted),Internal Azure OpenAI,Confidential (Financials / PII),Copilot Approved / PII Shielding Required
+EMP_171,Leonardo Lindqvist,Finance,Payroll Specialist,DEV_FIN_171,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_172,Benjamin N,Data & Analytics,BI Analyst,DEV_DAT_172,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_173,Nadia Jones,Finance,Payroll Specialist,DEV_FIN_173,Corporate Managed (Compliant),Enterprise Gemini,Internal Corporate Data,Zero External LLM / High-Risk Restrictions
+EMP_174,Thanh Davis,Human Resources,Talent Recruiter,DEV_HUM_174,Corporate Managed (Outdated Patch),Microsoft Copilot,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_175,Milos Hassan,Finance,Payroll Specialist,DEV_FIN_175,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_176,Mason Chawla,Marketing & Sales,Account Executive,DEV_MAR_176,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Approved Commercial Tools Only
+EMP_177,Lars Fernandez,Data & Analytics,Data Scientist,DEV_DAT_177,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_178,Sora Nielsen,Marketing & Sales,SEO Lead,DEV_MAR_178,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_179,Klara Sr,Engineering,Backend Developer,DEV_ENG_179,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Strict Local LLM Audit
+EMP_180,Ximena Verma,Marketing & Sales,Content Strategist,DEV_MAR_180,Corporate Managed (Compliant),Enterprise Gemini,Internal Corporate Data,Approved Commercial Tools Only
+EMP_181,Abigail Ortiz,Cybersecurity,Security Analyst,DEV_CYB_181,Corporate Managed (Compliant),None,Public Data Only,Zero Public LLM / Internal Gateway Only
+EMP_182,Harper Mansoor,Data & Analytics,Data Engineer,DEV_DAT_182,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_183,Swati Williams,Marketing & Sales,Content Strategist,DEV_MAR_183,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_184,Meena Iyer,Legal & Compliance,Compliance Manager,DEV_LEG_184,Corporate Managed (Compliant),Enterprise Gemini,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_185,Aarav Ortiz,Data & Analytics,Data Scientist,DEV_DAT_185,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_186,Hamza Torres,Marketing & Sales,Account Executive,DEV_MAR_186,Corporate Managed (Compliant),None,Internal Corporate Data,Approved Commercial Tools Only
+EMP_187,Klaus Al-Maktoum,Marketing & Sales,SEO Lead,DEV_MAR_187,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_188,Rajesh Anderson,Engineering,AI Architect,DEV_ENG_188,Corporate Managed (Compliant),Internal Azure OpenAI,Restricted (Source Code / Infrastructure),Strict Local LLM Audit
+EMP_189,Catalina Hassan,Legal & Compliance,Privacy Officer,DEV_LEG_189,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Strict Compliance Review Required
+EMP_190,Mei Al-Zahra,Data & Analytics,BI Analyst,DEV_DAT_190,Corporate Managed (Compliant),Microsoft Copilot,Confidential (Financials / PII),Internal Azure OpenAI Only
+EMP_191,Gaurav Deshmukh,Marketing & Sales,Content Strategist,DEV_MAR_191,Corporate Managed (Compliant),"Azure OpenAI, Copilot",Internal Corporate Data,Approved Commercial Tools Only
+EMP_192,Xia Lindqvist,Finance,Finance Director,DEV_FIN_192,Corporate Managed (Compliant),Internal Azure OpenAI,Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_193,Shreya Gomez,Data & Analytics,MLOps Engineer,DEV_DAT_193,BYOD (Untrusted),Microsoft Copilot,Restricted (Source Code / Infrastructure),Internal Azure OpenAI Only
+EMP_194,Evelyn Patel,Marketing & Sales,Marketing Specialist,DEV_MAR_194,Corporate Managed (Compliant),Internal Azure OpenAI,Public Data Only,Approved Commercial Tools Only
+EMP_195,Wyatt Tanaka,Cybersecurity,Security Analyst,DEV_CYB_195,Corporate Managed (Compliant),Microsoft Copilot,Restricted (Source Code / Infrastructure),Zero Public LLM / Internal Gateway Only
+EMP_196,Levi Deshmukh,Finance,Payroll Specialist,DEV_FIN_196,Corporate Managed (Outdated Patch),"Azure OpenAI, Copilot",Confidential (Financials / PII),Zero External LLM / High-Risk Restrictions
+EMP_197,Tao Novak,Legal & Compliance,Legal Counsel,DEV_LEG_197,BYOD (Untrusted),Microsoft Copilot,Confidential (Financials / PII),Strict Compliance Review Required
+EMP_198,Vikram Al-Falasi,Human Resources,Talent Recruiter,DEV_HUM_198,Corporate Managed (Compliant),Microsoft Copilot,Internal Corporate Data,Copilot Approved / PII Shielding Required
+EMP_199,Manish Williams,Marketing & Sales,Account Executive,DEV_MAR_199,Corporate Managed (Compliant),Internal Azure OpenAI,Internal Corporate Data,Approved Commercial Tools Only
+EMP_200,Katarina Wilson,Marketing & Sales,Marketing Specialist,DEV_MAR_200,Corporate Managed (Compliant),Microsoft Copilot,Public Data Only,Approved Commercial Tools Only

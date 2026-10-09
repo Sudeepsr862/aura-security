@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AURA Browser AI Guard — Service Catalog & Policy Options</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0b1120;
+      color: #f8fafc;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1e293b;
+      margin-bottom: 24px;
+    }
+    .title-group h1 {
+      margin: 0 0 6px 0;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .subtitle {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+    .card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 14px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr 1fr auto;
+      gap: 10px;
+      align-items: end;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+    input, select, textarea {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #38bdf8;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.15s;
+    }
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #2563eb;
+    }
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+    th {
+      padding: 10px 12px;
+      border-bottom: 1px solid #334155;
+      color: #94a3b8;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-cloud { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .badge-local { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+    .badge-custom { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+    .badge-protected { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title-group">
+        <h1><span>🛡️</span> AURA AI Service Catalog & Options</h1>
+        <p class="subtitle">Configure AI website domains and local model interfaces protected by the in-browser extension.</p>
+      </div>
+      <div>
+        <button id="btn-sync-server" class="btn btn-primary">Sync with AURA Server</button>
+      </div>
+    </div>
+
+    <!-- Add Site Section -->
+    <div class="card">
+      <h2 class="card-title"><span>+</span> Add AI Service Domain</h2>
+      <form id="add-site-form" class="form-row">
+        <div class="form-group">
+          <label for="site-name">Service Name</label>
+          <input type="text" id="site-name" placeholder="e.g. Perplexity AI" required />
+        </div>
+        <div class="form-group">
+          <label for="site-domain">Website Domain or Host</label>
+          <input type="text" id="site-domain" placeholder="e.g. perplexity.ai or localhost:9000" required />
+        </div>
+        <div class="form-group">
+          <label for="site-category">Category</label>
+          <select id="site-category">
+            <option value="cloud">Cloud AI</option>
+            <option value="local">Local Model</option>
+            <option value="custom">Custom Tool</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="site-adapter">Detector</label>
+          <select id="site-adapter">
+            <option value="generic">Generic Detector</option>
+            <option value="chatgpt">ChatGPT Style</option>
+            <option value="claude">Claude Style</option>
+            <option value="local_webui">Local WebUI</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Domain</button>
+      </form>
+    </div>
+
+    <!-- Active Catalog Table -->
+    <div class="card">
+      <h2 class="card-title"><span>📋</span> Configured AI Services Catalog (<span id="site-count">0</span>)</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Service Name</th>
+            <th>Domain</th>
+            <th>Category</th>
+            <th>Adapter</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="catalog-tbody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Live Rule Scanner Test Bench -->
+    <div class="card">
+      <h2 class="card-title"><span>🔬</span> In-Browser Rule Test Bench</h2>
+      <p style="color: #94a3b8; font-size: 13px; margin-top: -6px;">
+        Test sample text directly against the local rule engine without navigating away. Confirm that secrets are intercepted and never exposed.
+      </p>
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button type="button" class="btn" style="background: #1e293b; color: #cbd5e1;" onclick="setTestInput('sk-proj-abc1234567890abcdef1234567890abcdef')">Sample API Key</button>
+        <button type="button" class="btn" style="background: #1e293b; color: #cbd5e1;" onclick="setTestInput('postgres://admin:SuperSecret2026@internal-db:5432/main')">Database Password</button>
+        <button type="button" class="btn" style="background: #1e293b; color: #cbd5e1;" onclick="setTestInput('CONFIDENTIAL PII: Monthly Compensation Sheet for Executive Team')">Restricted Asset</button>
+        <button type="button" class="btn" style="background: #1e293b; color: #cbd5e1;" onclick="setTestInput('Hello, please help summarize this public documentation.')">Benign Message</button>
+      </div>
+      <textarea id="test-input" rows="4" style="width: 100%; font-family: monospace;" placeholder="Enter text to test..."></textarea>
+      <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <button id="btn-run-test" class="btn btn-primary">Run In-Memory Scan</button>
+        <div id="test-result-badge"></div>
+      </div>
+      <div id="test-result-box" style="margin-top: 12px; display: none; padding: 12px; border-radius: 6px; background: #1e293b;"></div>
+    </div>
+  </div>
+
+  <script src="rules.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -251,3 +251,115 @@ CREATE TABLE IF NOT EXISTS prompt_scans (
   char_count              INTEGER NOT NULL DEFAULT 0,
   created_at              TEXT    NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ── Extension AI Service Catalog ─────────────────────────────────────────────
+-- Configurable AI tools and website domains protected by the browser extension.
+CREATE TABLE IF NOT EXISTS extension_sites (
+  id              INTEGER PRIMARY KEY AUTOINCREMENT,
+  service_key     TEXT    NOT NULL UNIQUE,
+  name            TEXT    NOT NULL,
+  domain          TEXT    NOT NULL UNIQUE,
+  category        TEXT    NOT NULL DEFAULT 'cloud' CHECK(category IN ('cloud', 'local', 'custom')),
+  adapter         TEXT    NOT NULL DEFAULT 'generic', -- 'generic', 'chatgpt', 'claude', 'local_webui'
+  is_enabled      INTEGER NOT NULL DEFAULT 1,
+  last_active_at  TEXT,
+  status          TEXT    NOT NULL DEFAULT 'protected' CHECK(status IN ('protected', 'inactive', 'unsupported', 'changed')),
+  created_at      TEXT    NOT NULL DEFAULT (datetime('now')),
+  updated_at      TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+-- ── Live Extension Events ────────────────────────────────────────────────────
+-- Interception events recorded live by the browser extension.
+-- STRICT PRIVACY: Stores metadata only — NEVER persists raw prompt text or file contents.
+CREATE TABLE IF NOT EXISTS extension_events (
+  id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+  event_time          TEXT    NOT NULL DEFAULT (datetime('now')),
+  employee_id         TEXT    NOT NULL DEFAULT 'EMP_DEMO',
+  ai_service          TEXT    NOT NULL,
+  domain              TEXT    NOT NULL,
+  event_type          TEXT    NOT NULL CHECK(event_type IN ('message_send', 'file_upload')),
+  file_name           TEXT,   -- only for file uploads, e.g. "export.csv"
+  detected_category   TEXT    NOT NULL,
+  matched_rule        TEXT    NOT NULL,
+  action_taken        TEXT    NOT NULL CHECK(action_taken IN ('blocked', 'warned', 'allowed')),
+  risk_level          TEXT    NOT NULL DEFAULT 'high' CHECK(risk_level IN ('low', 'medium', 'high', 'critical')),
+  review_status       TEXT    NOT NULL DEFAULT 'Pending' CHECK(review_status IN ('Pending', 'Expected', 'Investigate', 'Policy exception')),
+  reviewer_note       TEXT,
+  reviewed_by         TEXT,
+  reviewed_at         TEXT,
+  is_live             INTEGER NOT NULL DEFAULT 1,
+  created_at          TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+-- ── Imported Reference Datasets (Read-only context) ──────────────────────────
+-- Tables mapping the 5 reference CSV datasets joined primarily on employee_id.
+CREATE TABLE IF NOT EXISTS dataset_employees (
+  employee_id           TEXT PRIMARY KEY,
+  full_name             TEXT NOT NULL,
+  department            TEXT NOT NULL,
+  job_role              TEXT NOT NULL,
+  device_id             TEXT NOT NULL,
+  device_trust_status   TEXT NOT NULL,
+  approved_ai_services  TEXT NOT NULL,
+  data_access_level     TEXT NOT NULL,
+  department_policy     TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS dataset_assets (
+  document_id           TEXT PRIMARY KEY,
+  filename              TEXT NOT NULL,
+  owner_department      TEXT NOT NULL,
+  data_classification   TEXT NOT NULL,
+  data_category         TEXT NOT NULL,
+  authorized_roles      TEXT NOT NULL,
+  permitted_destinations TEXT NOT NULL,
+  synthetic_fingerprint TEXT,
+  fictional_snippet     TEXT
+);
+
+CREATE TABLE IF NOT EXISTS dataset_ai_logs (
+  log_id                TEXT PRIMARY KEY,
+  timestamp             TEXT NOT NULL,
+  employee_id           TEXT NOT NULL,
+  ai_service            TEXT NOT NULL,
+  destination_domain    TEXT NOT NULL,
+  dst_port              INTEGER NOT NULL,
+  business_purpose      TEXT,
+  prompt_category       TEXT,
+  inspection_result     TEXT,
+  service_status        TEXT,
+  request_size          TEXT,
+  response_size         TEXT
+);
+
+CREATE TABLE IF NOT EXISTS dataset_network_logs (
+  network_log_id        TEXT PRIMARY KEY,
+  timestamp             TEXT NOT NULL,
+  employee_id           TEXT NOT NULL,
+  device_id             TEXT NOT NULL,
+  destination_domain    TEXT NOT NULL,
+  destination_ip        TEXT NOT NULL,
+  protocol              TEXT NOT NULL,
+  connection_status     TEXT NOT NULL,
+  bytes_sent            INTEGER NOT NULL,
+  bytes_recv            INTEGER NOT NULL,
+  transfer_duration_sec INTEGER,
+  request_frequency_min INTEGER,
+  trust_level           TEXT,
+  anomaly_indicator     TEXT
+);
+
+CREATE TABLE IF NOT EXISTS dataset_incidents (
+  incident_id           TEXT PRIMARY KEY,
+  timestamp             TEXT NOT NULL,
+  employee_id           TEXT NOT NULL,
+  related_event_ids     TEXT,
+  detected_categories   TEXT,
+  policy_violation      TEXT,
+  risk_score            INTEGER,
+  severity              TEXT,
+  explanation           TEXT,
+  recommended_action    TEXT,
+  response_status       TEXT,
+  analyst_resolution    TEXT
+);

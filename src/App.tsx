@@ -7,17 +7,20 @@ import { PromptLab }    from './pages/PromptLab';
 import { DataRisk }     from './pages/DataRisk';
 import { Incidents }    from './pages/Incidents';
 import { Governance }   from './pages/Governance';
-import { DataGuard }    from './pages/DataGuard';
+import { DataGuard }      from './pages/DataGuard';
+import { ExtensionGuard }  from './pages/ExtensionGuard';
 import type { NavPage } from './types';
 
 const PAGE_LABELS: Record<NavPage, string> = {
-  'overview':     'Overview',
-  'ai-inventory': 'AI Inventory',
-  'prompt-lab':   'Prompt Lab',
-  'data-guard':   'Data Guard',
-  'data-risk':    'Data & Risk',
-  'incidents':    'Incidents',
-  'governance':   'Governance',
+  'overview':        'Overview',
+  'ai-inventory':    'AI Inventory',
+  'prompt-lab':      'Prompt Lab',
+  'data-guard':      'Data Guard',
+  'extension-guard': 'Browser AI Guard',
+  'demo-ai-chat':    'Test Sandbox',
+  'data-risk':       'Data & Risk',
+  'incidents':       'Incidents',
+  'governance':      'Governance',
 };
 
 export function App() {
@@ -32,13 +35,15 @@ export function App() {
 
   function renderPage() {
     switch (currentPage) {
-      case 'overview':     return <Overview onNavigate={navigate} />;
-      case 'ai-inventory': return <AIInventory />;
-      case 'prompt-lab':   return <PromptLab />;
-      case 'data-guard':   return <DataGuard />;
-      case 'data-risk':    return <DataRisk />;
-      case 'incidents':    return <Incidents />;
-      case 'governance':   return <Governance />;
+      case 'overview':        return <Overview onNavigate={navigate} />;
+      case 'ai-inventory':    return <AIInventory />;
+      case 'prompt-lab':      return <PromptLab />;
+      case 'data-guard':      return <DataGuard />;
+      case 'extension-guard': return <ExtensionGuard />;
+      case 'demo-ai-chat':    return <ExtensionGuard />;
+      case 'data-risk':       return <DataRisk />;
+      case 'incidents':       return <Incidents />;
+      case 'governance':      return <Governance />;
     }
   }
 

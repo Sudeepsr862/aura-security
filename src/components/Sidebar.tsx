@@ -11,13 +11,14 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: 'overview',     label: 'Overview',     icon: '◎', description: 'Summary and recent activity' },
-  { id: 'ai-inventory', label: 'AI Inventory', icon: '🗂', description: 'Service inventory' },
-  { id: 'prompt-lab',   label: 'Prompt Lab',   icon: '🔬', description: 'Synthetic prompt check' },
-  { id: 'data-guard',   label: 'Data Guard',   icon: '🛡️', description: 'File transfer & sharing rules' },
-  { id: 'data-risk',    label: 'Data & Risk',  icon: '🏷', description: 'Sensitivity and risk signals' },
-  { id: 'incidents',    label: 'Incidents',    icon: '🔔', description: 'Sample incident queue' },
-  { id: 'governance',   label: 'Governance',   icon: '🏛️', description: 'Architecture and team info' },
+  { id: 'overview',        label: 'Overview',         icon: '◎', description: 'Summary and recent activity' },
+  { id: 'ai-inventory',    label: 'AI Inventory',     icon: '🗂', description: 'Service inventory' },
+  { id: 'prompt-lab',      label: 'Prompt Lab',       icon: '🔬', description: 'Synthetic prompt check' },
+  { id: 'extension-guard', label: 'Browser AI Guard', icon: '🧩', description: 'Chrome extension & live events' },
+  { id: 'data-guard',      label: 'Data Guard',       icon: '🛡️', description: 'File transfer & sharing rules' },
+  { id: 'data-risk',       label: 'Data & Risk',      icon: '🏷', description: 'Sensitivity and risk signals' },
+  { id: 'incidents',       label: 'Incidents',        icon: '🔔', description: 'Sample incident queue' },
+  { id: 'governance',      label: 'Governance',       icon: '🏛️', description: 'Architecture and team info' },
 ];
 
 interface SidebarProps {

@@ -11,12 +11,13 @@
     "build:server": "tsc -p tsconfig.server.json",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "tsx server/tests/discovery.test.ts && tsx server/tests/api.test.ts && tsx server/tests/scanner.test.ts && tsx server/tests/promptLabApi.test.ts && tsx server/tests/riskEngine.test.ts && tsx server/tests/riskApi.test.ts && tsx server/tests/incidentPolicy.test.ts && tsx server/tests/dataGuard.test.ts",
+    "test": "tsx server/tests/discovery.test.ts && tsx server/tests/api.test.ts && tsx server/tests/scanner.test.ts && tsx server/tests/promptLabApi.test.ts && tsx server/tests/riskEngine.test.ts && tsx server/tests/riskApi.test.ts && tsx server/tests/incidentPolicy.test.ts && tsx server/tests/dataGuard.test.ts && tsx server/tests/extensionApi.test.ts",
     "test:discovery": "tsx server/tests/discovery.test.ts",
     "test:scanner": "tsx server/tests/scanner.test.ts && tsx server/tests/promptLabApi.test.ts",
     "test:risk": "tsx server/tests/riskEngine.test.ts && tsx server/tests/riskApi.test.ts",
     "test:incidents": "tsx server/tests/incidentPolicy.test.ts",
-    "test:dataguard": "tsx server/tests/dataGuard.test.ts"
+    "test:dataguard": "tsx server/tests/dataGuard.test.ts",
+    "test:extension": "tsx server/tests/extensionApi.test.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0",

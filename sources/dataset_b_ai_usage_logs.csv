@@ -1,0 +1,501 @@
+log_id,timestamp,employee_id,ai_service,destination_domain,dst_port,business_purpose,prompt_category,content_inspection_result,service_status,request_size,response_size
+LOG_0175,2026-10-09 00:05:01,EMP_058,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),990 KB,799 KB
+LOG_0056,2026-10-09 00:22:19,EMP_086,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),1886 KB,504 KB
+LOG_0490,2026-10-09 00:38:25,EMP_006,LM Studio (Local LLM),127.0.0.1,1234,Document & Report Summarization,Financial Data & Projections,Sensitive Code Detected,Unapproved (Rogue Local AI),2896 KB,221 KB
+LOG_0460,2026-10-09 00:47:03,EMP_060,LM Studio (Local LLM),127.0.0.1,1234,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),4244 KB,186 KB
+LOG_0443,2026-10-09 01:08:42,EMP_006,OpenAI API,api.openai.com,443,Legal Contract Analysis,Financial Data & Projections,Clean,Unapproved (Shadow AI),69 KB,755 KB
+LOG_0271,2026-10-09 01:32:29,EMP_150,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),125 KB,21 KB
+LOG_0027,2026-10-09 01:39:36,EMP_010,ChatGPT,chatgpt.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4224 KB,276 KB
+LOG_0364,2026-10-09 01:53:49,EMP_068,Claude AI,claude.ai,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3129 KB,707 KB
+LOG_0440,2026-10-09 02:05:58,EMP_001,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),4271 KB,81 KB
+LOG_0433,2026-10-09 03:14:46,EMP_035,OpenAI API,api.openai.com,443,Customer Support Automated Replies,Public Knowledge Query,Clean,Unapproved (Shadow AI),130 KB,178 KB
+LOG_0304,2026-10-09 03:21:41,EMP_073,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),4307 KB,183 KB
+LOG_0354,2026-10-09 03:34:22,EMP_102,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Source Code Analysis,Clean,Approved,97 KB,760 KB
+LOG_0014,2026-10-09 03:35:14,EMP_098,Claude AI,claude.ai,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Unapproved (Shadow AI),59 KB,74 KB
+LOG_0048,2026-10-09 04:15:30,EMP_184,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,General Text Processing,Unencrypted Source Code,Unapproved (Shadow AI),1672 KB,740 KB
+LOG_0409,2026-10-09 05:03:58,EMP_154,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,Financial Data & Projections,Clean,Unapproved (Shadow AI),119 KB,522 KB
+LOG_0484,2026-10-09 05:04:03,EMP_188,OpenAI API,api.openai.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),4790 KB,238 KB
+LOG_0183,2026-10-09 05:12:02,EMP_042,Claude AI,claude.ai,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Unapproved (Shadow AI),132 KB,412 KB
+LOG_0087,2026-10-09 05:27:47,EMP_057,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1955 KB,695 KB
+LOG_0475,2026-10-09 05:59:20,EMP_150,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,General Text Processing,Clean,Approved,147 KB,568 KB
+LOG_0278,2026-10-09 06:04:43,EMP_191,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),208 KB,217 KB
+LOG_0349,2026-10-09 06:23:24,EMP_154,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Source Code Analysis,Clean,Unapproved (Shadow AI),58 KB,334 KB
+LOG_0059,2026-10-09 06:24:20,EMP_019,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3185 KB,289 KB
+LOG_0427,2026-10-09 06:28:17,EMP_096,Claude AI,claude.ai,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),4090 KB,786 KB
+LOG_0424,2026-10-09 06:40:37,EMP_031,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),1061 KB,702 KB
+LOG_0448,2026-10-09 06:41:20,EMP_006,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Public Knowledge Query,Clean,Approved,87 KB,536 KB
+LOG_0230,2026-10-09 06:57:33,EMP_154,Claude AI,claude.ai,443,Customer Support Automated Replies,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),3465 KB,343 KB
+LOG_0481,2026-10-09 06:57:41,EMP_103,Claude AI,claude.ai,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),25 KB,176 KB
+LOG_0412,2026-10-09 07:01:24,EMP_136,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),1893 KB,667 KB
+LOG_0222,2026-10-09 07:01:28,EMP_032,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),53 KB,425 KB
+LOG_0132,2026-10-09 07:05:20,EMP_128,OpenAI API,api.openai.com,443,Document & Report Summarization,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),150 KB,566 KB
+LOG_0330,2026-10-09 07:06:00,EMP_100,Claude AI,claude.ai,443,Personal / Non-Work Research,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),4943 KB,236 KB
+LOG_0284,2026-10-09 07:09:24,EMP_010,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),952 KB,98 KB
+LOG_0125,2026-10-09 07:13:41,EMP_042,Azure OpenAI,azure.openai.com,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Approved,63 KB,133 KB
+LOG_0072,2026-10-09 07:14:25,EMP_003,Claude AI,claude.ai,443,Marketing Copy Generation,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),3103 KB,489 KB
+LOG_0376,2026-10-09 07:14:38,EMP_005,Claude AI,claude.ai,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),85 KB,344 KB
+LOG_0208,2026-10-09 07:15:29,EMP_160,ChatGPT,chatgpt.com,443,Marketing Copy Generation,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),1234 KB,104 KB
+LOG_0298,2026-10-09 07:15:42,EMP_174,Google Gemini,generativelanguage.googleapis.com,443,Employee Salary & Review Drafts,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4693 KB,665 KB
+LOG_0053,2026-10-09 07:18:15,EMP_128,Microsoft Copilot,copilot.microsoft.com,443,Legal Contract Analysis,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),1213 KB,159 KB
+LOG_0179,2026-10-09 07:23:04,EMP_093,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),436 KB,655 KB
+LOG_0390,2026-10-09 07:25:36,EMP_198,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Rogue Local AI),3035 KB,8 KB
+LOG_0459,2026-10-09 07:26:02,EMP_098,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,General Text Processing,Unencrypted Source Code,Unapproved (Shadow AI),4210 KB,142 KB
+LOG_0338,2026-10-09 07:31:40,EMP_185,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Unapproved (Shadow AI),34 KB,401 KB
+LOG_0355,2026-10-09 07:33:15,EMP_082,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),2372 KB,100 KB
+LOG_0437,2026-10-09 07:33:17,EMP_167,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Unencrypted Source Code,Unapproved (Shadow AI),1044 KB,294 KB
+LOG_0393,2026-10-09 07:34:24,EMP_177,OpenAI API,api.openai.com,443,Legal Contract Analysis,General Text Processing,Clean,Unapproved (Shadow AI),48 KB,461 KB
+LOG_0341,2026-10-09 07:34:34,EMP_035,OpenAI API,api.openai.com,443,Marketing Copy Generation,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),727 KB,528 KB
+LOG_0294,2026-10-09 07:36:12,EMP_192,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),7 KB,749 KB
+LOG_0254,2026-10-09 07:38:02,EMP_066,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),12 KB,416 KB
+LOG_0458,2026-10-09 07:39:12,EMP_102,Claude AI,claude.ai,443,Document & Report Summarization,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),3824 KB,200 KB
+LOG_0203,2026-10-09 07:41:10,EMP_176,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),2845 KB,582 KB
+LOG_0134,2026-10-09 07:41:41,EMP_032,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),1951 KB,428 KB
+LOG_0238,2026-10-09 07:42:06,EMP_051,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2112 KB,11 KB
+LOG_0250,2026-10-09 07:42:55,EMP_193,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),1051 KB,187 KB
+LOG_0476,2026-10-09 07:45:20,EMP_050,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),18 KB,522 KB
+LOG_0231,2026-10-09 07:49:08,EMP_031,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3991 KB,671 KB
+LOG_0191,2026-10-09 07:49:41,EMP_046,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,General Text Processing,Unencrypted Source Code,Unapproved (Shadow AI),345 KB,624 KB
+LOG_0391,2026-10-09 07:52:42,EMP_078,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,Source Code Analysis,Sensitive Code Detected,Unapproved (Rogue Local AI),1775 KB,179 KB
+LOG_0317,2026-10-09 07:53:41,EMP_078,Claude AI,claude.ai,443,Marketing Copy Generation,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2232 KB,361 KB
+LOG_0291,2026-10-09 08:00:25,EMP_081,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2822 KB,445 KB
+LOG_0076,2026-10-09 08:00:45,EMP_192,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Financial Data & Projections,Sensitive Code Detected,Unapproved (Rogue Local AI),526 KB,571 KB
+LOG_0008,2026-10-09 08:00:46,EMP_022,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),2524 KB,659 KB
+LOG_0468,2026-10-09 08:03:44,EMP_061,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),3018 KB,468 KB
+LOG_0195,2026-10-09 08:04:28,EMP_068,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2926 KB,731 KB
+LOG_0389,2026-10-09 08:06:21,EMP_022,Claude AI,claude.ai,443,Customer Support Automated Replies,General Text Processing,Clean,Unapproved (Shadow AI),73 KB,309 KB
+LOG_0335,2026-10-09 08:07:37,EMP_017,Hugging Face Models,huggingface.co,443,Legal Contract Analysis,General Text Processing,Clean,Unapproved (Shadow AI),36 KB,258 KB
+LOG_0004,2026-10-09 08:08:15,EMP_042,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),110 KB,602 KB
+LOG_0082,2026-10-09 08:11:35,EMP_174,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3770 KB,710 KB
+LOG_0167,2026-10-09 08:11:53,EMP_193,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Shadow AI),94 KB,697 KB
+LOG_0197,2026-10-09 08:12:50,EMP_140,OpenAI API,api.openai.com,443,Customer Support Automated Replies,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3036 KB,572 KB
+LOG_0160,2026-10-09 08:15:45,EMP_045,Ollama (Local LLM),localhost,11434,Personal / Non-Work Research,API Key / Secret Credential Embeds,Clean,Unapproved (Rogue Local AI),41 KB,377 KB
+LOG_0436,2026-10-09 08:16:30,EMP_193,OpenAI API,api.openai.com,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),2546 KB,435 KB
+LOG_0245,2026-10-09 08:20:54,EMP_176,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Rogue Local AI),53 KB,739 KB
+LOG_0163,2026-10-09 08:22:19,EMP_167,Hugging Face Models,huggingface.co,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),80 KB,577 KB
+LOG_0172,2026-10-09 08:27:05,EMP_155,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),3478 KB,59 KB
+LOG_0398,2026-10-09 08:27:05,EMP_018,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),4954 KB,269 KB
+LOG_0428,2026-10-09 08:27:40,EMP_039,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3220 KB,9 KB
+LOG_0024,2026-10-09 08:32:05,EMP_085,OpenAI API,api.openai.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),61 KB,418 KB
+LOG_0305,2026-10-09 08:35:27,EMP_036,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,General Text Processing,Clean,Unapproved (Rogue Local AI),48 KB,195 KB
+LOG_0463,2026-10-09 08:38:44,EMP_037,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),81 KB,733 KB
+LOG_0144,2026-10-09 08:39:03,EMP_150,ChatGPT,chatgpt.com,443,Marketing Copy Generation,General Text Processing,Clean,Unapproved (Shadow AI),125 KB,626 KB
+LOG_0361,2026-10-09 08:43:19,EMP_039,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),827 KB,733 KB
+LOG_0086,2026-10-09 08:44:19,EMP_128,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),113 KB,87 KB
+LOG_0302,2026-10-09 08:46:09,EMP_174,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1774 KB,538 KB
+LOG_0234,2026-10-09 08:47:55,EMP_060,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4732 KB,622 KB
+LOG_0348,2026-10-09 08:49:06,EMP_097,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),440 KB,17 KB
+LOG_0182,2026-10-09 08:49:43,EMP_045,Ollama (Local LLM),localhost,11434,Personal / Non-Work Research,Public Knowledge Query,Sensitive Code Detected,Unapproved (Rogue Local AI),1184 KB,69 KB
+LOG_0414,2026-10-09 08:51:00,EMP_045,Claude AI,claude.ai,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2335 KB,438 KB
+LOG_0492,2026-10-09 08:51:36,EMP_073,Azure OpenAI,azure.openai.com,443,Personal / Non-Work Research,Public Knowledge Query,Clean,Approved,141 KB,79 KB
+LOG_0279,2026-10-09 08:52:45,EMP_117,Hugging Face Models,huggingface.co,443,Document & Report Summarization,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),4699 KB,251 KB
+LOG_0312,2026-10-09 08:53:28,EMP_037,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Source Code Analysis,Clean,Approved,125 KB,144 KB
+LOG_0411,2026-10-09 08:55:30,EMP_148,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,Financial Data & Projections,Sensitive Code Detected,Unapproved (Rogue Local AI),2198 KB,771 KB
+LOG_0426,2026-10-09 08:55:45,EMP_042,OpenAI API,api.openai.com,443,Document & Report Summarization,General Text Processing,Clean,Unapproved (Shadow AI),46 KB,325 KB
+LOG_0098,2026-10-09 09:00:18,EMP_028,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4492 KB,500 KB
+LOG_0060,2026-10-09 09:05:30,EMP_099,Azure OpenAI,azure.openai.com,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Approved,58 KB,670 KB
+LOG_0176,2026-10-09 09:07:03,EMP_067,Claude AI,claude.ai,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),3824 KB,69 KB
+LOG_0310,2026-10-09 09:07:11,EMP_068,Google Gemini,generativelanguage.googleapis.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3506 KB,615 KB
+LOG_0074,2026-10-09 09:07:46,EMP_082,Claude AI,claude.ai,443,Legal Contract Analysis,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),1649 KB,226 KB
+LOG_0377,2026-10-09 09:08:21,EMP_058,OpenAI API,api.openai.com,443,Legal Contract Analysis,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1290 KB,605 KB
+LOG_0242,2026-10-09 09:08:30,EMP_140,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3486 KB,723 KB
+LOG_0129,2026-10-09 09:08:47,EMP_119,Hugging Face Models,huggingface.co,443,Document & Report Summarization,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),3981 KB,464 KB
+LOG_0210,2026-10-09 09:10:31,EMP_012,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),4154 KB,28 KB
+LOG_0474,2026-10-09 09:10:37,EMP_160,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Approved,120 KB,731 KB
+LOG_0368,2026-10-09 09:11:17,EMP_050,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),63 KB,667 KB
+LOG_0154,2026-10-09 09:11:38,EMP_184,OpenAI API,api.openai.com,443,Document & Report Summarization,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3880 KB,777 KB
+LOG_0359,2026-10-09 09:12:08,EMP_191,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),3762 KB,482 KB
+LOG_0255,2026-10-09 09:13:48,EMP_128,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Clean,Approved,75 KB,244 KB
+LOG_0147,2026-10-09 09:13:49,EMP_001,OpenAI API,api.openai.com,443,Marketing Copy Generation,Financial Data & Projections,Clean,Unapproved (Shadow AI),31 KB,12 KB
+LOG_0496,2026-10-09 09:14:45,EMP_012,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),2796 KB,496 KB
+LOG_0109,2026-10-09 09:16:42,EMP_096,Azure OpenAI,azure.openai.com,443,Personal / Non-Work Research,Financial Data & Projections,Clean,Approved,140 KB,166 KB
+LOG_0114,2026-10-09 09:16:43,EMP_096,OpenAI API,api.openai.com,443,Document & Report Summarization,Public Knowledge Query,Clean,Unapproved (Shadow AI),80 KB,456 KB
+LOG_0358,2026-10-09 09:16:54,EMP_046,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2685 KB,468 KB
+LOG_0494,2026-10-09 09:18:39,EMP_100,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3771 KB,341 KB
+LOG_0226,2026-10-09 09:19:49,EMP_161,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,Public Knowledge Query,Clean,Unapproved (Shadow AI),82 KB,496 KB
+LOG_0329,2026-10-09 09:23:42,EMP_192,OpenAI API,api.openai.com,443,Code Debugging & Refactoring,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1998 KB,444 KB
+LOG_0111,2026-10-09 09:24:54,EMP_161,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Rogue Local AI),4765 KB,372 KB
+LOG_0071,2026-10-09 09:26:31,EMP_174,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),4100 KB,463 KB
+LOG_0325,2026-10-09 09:27:52,EMP_108,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2403 KB,350 KB
+LOG_0394,2026-10-09 09:29:16,EMP_006,Claude AI,claude.ai,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),1318 KB,775 KB
+LOG_0057,2026-10-09 09:31:01,EMP_140,Hugging Face Models,huggingface.co,443,Legal Contract Analysis,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1432 KB,483 KB
+LOG_0216,2026-10-09 09:32:25,EMP_184,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,Source Code Analysis,Sensitive Code Detected,Unapproved (Rogue Local AI),1202 KB,735 KB
+LOG_0316,2026-10-09 09:34:52,EMP_073,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Shadow AI),140 KB,228 KB
+LOG_0214,2026-10-09 09:35:18,EMP_160,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),141 KB,291 KB
+LOG_0075,2026-10-09 09:37:48,EMP_086,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Source Code Analysis,Sensitive Code Detected,Unapproved (Rogue Local AI),2506 KB,237 KB
+LOG_0296,2026-10-09 09:42:09,EMP_161,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,Source Code Analysis,Clean,Unapproved (Shadow AI),123 KB,601 KB
+LOG_0480,2026-10-09 09:46:18,EMP_185,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Clean,Approved,131 KB,461 KB
+LOG_0307,2026-10-09 09:48:45,EMP_070,ChatGPT,chatgpt.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),3076 KB,338 KB
+LOG_0100,2026-10-09 09:49:26,EMP_185,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Public Knowledge Query,Clean,Approved,122 KB,727 KB
+LOG_0037,2026-10-09 09:50:44,EMP_154,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Clean,Unapproved (Shadow AI),57 KB,209 KB
+LOG_0126,2026-10-09 09:53:48,EMP_166,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),1988 KB,341 KB
+LOG_0012,2026-10-09 09:55:38,EMP_162,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),2633 KB,413 KB
+LOG_0370,2026-10-09 09:56:51,EMP_099,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),5 KB,396 KB
+LOG_0340,2026-10-09 09:59:03,EMP_177,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Shadow AI),109 KB,723 KB
+LOG_0095,2026-10-09 10:00:35,EMP_033,Hugging Face Models,huggingface.co,443,Document & Report Summarization,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),3860 KB,125 KB
+LOG_0178,2026-10-09 10:00:39,EMP_184,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1614 KB,685 KB
+LOG_0324,2026-10-09 10:00:55,EMP_103,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),598 KB,552 KB
+LOG_0439,2026-10-09 10:02:35,EMP_102,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),2788 KB,245 KB
+LOG_0257,2026-10-09 10:03:35,EMP_102,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),13 KB,357 KB
+LOG_0431,2026-10-09 10:04:52,EMP_117,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4342 KB,615 KB
+LOG_0392,2026-10-09 10:05:30,EMP_096,ChatGPT,chatgpt.com,443,Marketing Copy Generation,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4086 KB,681 KB
+LOG_0387,2026-10-09 10:06:04,EMP_003,Google Gemini,generativelanguage.googleapis.com,443,Employee Salary & Review Drafts,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),694 KB,565 KB
+LOG_0303,2026-10-09 10:06:28,EMP_086,Ollama (Local LLM),localhost,11434,Legal Contract Analysis,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),446 KB,732 KB
+LOG_0090,2026-10-09 10:06:54,EMP_188,OpenAI API,api.openai.com,443,Legal Contract Analysis,General Text Processing,Clean,Unapproved (Shadow AI),74 KB,683 KB
+LOG_0219,2026-10-09 10:07:26,EMP_097,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Clean,Approved,122 KB,276 KB
+LOG_0379,2026-10-09 10:08:10,EMP_098,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1507 KB,729 KB
+LOG_0005,2026-10-09 10:08:32,EMP_035,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Source Code Analysis,Sensitive Code Detected,Unapproved (Rogue Local AI),1332 KB,647 KB
+LOG_0174,2026-10-09 10:09:08,EMP_100,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),3922 KB,464 KB
+LOG_0207,2026-10-09 10:09:20,EMP_066,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3115 KB,532 KB
+LOG_0165,2026-10-09 10:11:13,EMP_003,Google Gemini,generativelanguage.googleapis.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),1206 KB,163 KB
+LOG_0381,2026-10-09 10:11:46,EMP_136,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),47 KB,621 KB
+LOG_0249,2026-10-09 10:11:49,EMP_005,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3754 KB,391 KB
+LOG_0479,2026-10-09 10:15:57,EMP_093,Claude AI,claude.ai,443,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Shadow AI),98 KB,121 KB
+LOG_0070,2026-10-09 10:16:21,EMP_070,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),133 KB,200 KB
+LOG_0265,2026-10-09 10:16:23,EMP_100,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),3926 KB,784 KB
+LOG_0193,2026-10-09 10:17:15,EMP_108,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4168 KB,535 KB
+LOG_0228,2026-10-09 10:18:45,EMP_184,ChatGPT,chatgpt.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4004 KB,224 KB
+LOG_0283,2026-10-09 10:24:27,EMP_165,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Unencrypted Source Code,Unapproved (Shadow AI),2499 KB,257 KB
+LOG_0209,2026-10-09 10:24:55,EMP_007,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4812 KB,743 KB
+LOG_0107,2026-10-09 10:27:09,EMP_125,Claude AI,claude.ai,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1472 KB,184 KB
+LOG_0456,2026-10-09 10:28:07,EMP_167,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2989 KB,653 KB
+LOG_0188,2026-10-09 10:28:38,EMP_167,Hugging Face Models,huggingface.co,443,Employee Salary & Review Drafts,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2959 KB,462 KB
+LOG_0289,2026-10-09 10:31:09,EMP_191,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3529 KB,311 KB
+LOG_0453,2026-10-09 10:31:47,EMP_148,Azure OpenAI,azure.openai.com,443,Document & Report Summarization,General Text Processing,Clean,Approved,106 KB,41 KB
+LOG_0320,2026-10-09 10:34:10,EMP_176,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Financial Data & Projections,Unencrypted Source Code,Unapproved (Shadow AI),2270 KB,531 KB
+LOG_0471,2026-10-09 10:35:03,EMP_088,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),3709 KB,235 KB
+LOG_0352,2026-10-09 10:35:29,EMP_082,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Internal PII / HR Documents,Clean,Approved,75 KB,582 KB
+LOG_0045,2026-10-09 10:35:53,EMP_166,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),3601 KB,598 KB
+LOG_0169,2026-10-09 10:36:28,EMP_018,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,General Text Processing,Clean,Unapproved (Rogue Local AI),136 KB,433 KB
+LOG_0256,2026-10-09 10:38:49,EMP_144,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),4350 KB,231 KB
+LOG_0081,2026-10-09 10:39:03,EMP_078,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2247 KB,681 KB
+LOG_0388,2026-10-09 10:39:57,EMP_039,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,General Text Processing,Clean,Unapproved (Rogue Local AI),43 KB,626 KB
+LOG_0434,2026-10-09 10:41:50,EMP_068,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4460 KB,643 KB
+LOG_0047,2026-10-09 10:42:40,EMP_174,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1920 KB,208 KB
+LOG_0487,2026-10-09 10:43:19,EMP_081,ChatGPT,chatgpt.com,443,Marketing Copy Generation,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3316 KB,681 KB
+LOG_0112,2026-10-09 10:44:18,EMP_144,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Clean,Approved,3 KB,584 KB
+LOG_0293,2026-10-09 10:44:40,EMP_012,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,Financial Data & Projections,Unencrypted Source Code,Unapproved (Rogue Local AI),2376 KB,407 KB
+LOG_0099,2026-10-09 10:48:34,EMP_171,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2036 KB,590 KB
+LOG_0478,2026-10-09 10:48:39,EMP_192,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,API Key / Secret Credential Embeds,Clean,Unapproved (Rogue Local AI),3 KB,122 KB
+LOG_0225,2026-10-09 10:49:55,EMP_183,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),2365 KB,576 KB
+LOG_0166,2026-10-09 10:50:06,EMP_010,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),1153 KB,616 KB
+LOG_0198,2026-10-09 10:51:35,EMP_144,OpenAI API,api.openai.com,443,Document & Report Summarization,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3341 KB,739 KB
+LOG_0038,2026-10-09 10:52:50,EMP_042,Claude AI,claude.ai,443,Customer Support Automated Replies,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),3344 KB,341 KB
+LOG_0374,2026-10-09 10:53:54,EMP_185,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),92 KB,610 KB
+LOG_0309,2026-10-09 10:54:29,EMP_073,OpenAI API,api.openai.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),1177 KB,325 KB
+LOG_0432,2026-10-09 10:56:43,EMP_085,OpenAI API,api.openai.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1623 KB,173 KB
+LOG_0263,2026-10-09 10:58:00,EMP_188,Claude AI,claude.ai,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),4003 KB,253 KB
+LOG_0157,2026-10-09 11:03:23,EMP_107,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,Public Knowledge Query,Clean,Unapproved (Shadow AI),130 KB,398 KB
+LOG_0467,2026-10-09 11:03:42,EMP_004,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2427 KB,704 KB
+LOG_0323,2026-10-09 11:04:40,EMP_099,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3103 KB,470 KB
+LOG_0152,2026-10-09 11:05:25,EMP_117,Microsoft Copilot,copilot.microsoft.com,443,Legal Contract Analysis,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1457 KB,83 KB
+LOG_0318,2026-10-09 11:07:49,EMP_039,Claude AI,claude.ai,443,Customer Support Automated Replies,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),2952 KB,732 KB
+LOG_0251,2026-10-09 11:08:46,EMP_176,Claude AI,claude.ai,443,Code Debugging & Refactoring,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3872 KB,694 KB
+LOG_0097,2026-10-09 11:09:24,EMP_154,Claude AI,claude.ai,443,Employee Salary & Review Drafts,Source Code Analysis,Clean,Unapproved (Shadow AI),107 KB,353 KB
+LOG_0054,2026-10-09 11:09:45,EMP_165,Claude AI,claude.ai,443,Document & Report Summarization,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2790 KB,560 KB
+LOG_0142,2026-10-09 11:09:47,EMP_167,Azure OpenAI,azure.openai.com,443,Document & Report Summarization,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),1842 KB,390 KB
+LOG_0143,2026-10-09 11:10:23,EMP_099,Microsoft Copilot,copilot.microsoft.com,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),775 KB,58 KB
+LOG_0078,2026-10-09 11:11:03,EMP_086,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Shadow AI),103 KB,508 KB
+LOG_0145,2026-10-09 11:13:48,EMP_128,LM Studio (Local LLM),127.0.0.1,1234,Document & Report Summarization,Financial Data & Projections,Unencrypted Source Code,Unapproved (Rogue Local AI),988 KB,295 KB
+LOG_0055,2026-10-09 11:13:53,EMP_107,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),148 KB,394 KB
+LOG_0452,2026-10-09 11:15:05,EMP_193,Ollama (Local LLM),localhost,11434,Personal / Non-Work Research,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),801 KB,515 KB
+LOG_0019,2026-10-09 11:17:29,EMP_037,Claude AI,claude.ai,443,Document & Report Summarization,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),494 KB,672 KB
+LOG_0444,2026-10-09 11:21:11,EMP_039,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2306 KB,399 KB
+LOG_0110,2026-10-09 11:22:37,EMP_010,Microsoft Copilot,copilot.microsoft.com,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Clean,Approved,65 KB,472 KB
+LOG_0252,2026-10-09 11:24:52,EMP_183,Claude AI,claude.ai,443,Customer Support Automated Replies,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1350 KB,287 KB
+LOG_0049,2026-10-09 11:25:15,EMP_032,OpenAI API,api.openai.com,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Unapproved (Shadow AI),57 KB,185 KB
+LOG_0260,2026-10-09 11:26:35,EMP_160,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),2168 KB,213 KB
+LOG_0485,2026-10-09 11:28:40,EMP_177,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),3270 KB,694 KB
+LOG_0239,2026-10-09 11:28:48,EMP_177,Microsoft Copilot,copilot.microsoft.com,443,Legal Contract Analysis,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),2222 KB,674 KB
+LOG_0206,2026-10-09 11:29:04,EMP_088,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4046 KB,480 KB
+LOG_0276,2026-10-09 11:30:03,EMP_193,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,Source Code Analysis,Clean,Unapproved (Shadow AI),112 KB,665 KB
+LOG_0402,2026-10-09 11:31:36,EMP_177,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Rogue Local AI),3381 KB,152 KB
+LOG_0041,2026-10-09 11:32:07,EMP_012,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),3652 KB,6 KB
+LOG_0190,2026-10-09 11:32:51,EMP_096,OpenAI API,api.openai.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),3669 KB,40 KB
+LOG_0360,2026-10-09 11:34:22,EMP_012,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Clean,Unapproved (Shadow AI),68 KB,127 KB
+LOG_0477,2026-10-09 11:34:25,EMP_033,ChatGPT,chatgpt.com,443,Legal Contract Analysis,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),2798 KB,344 KB
+LOG_0339,2026-10-09 11:34:43,EMP_166,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Shadow AI),18 KB,19 KB
+LOG_0133,2026-10-09 11:38:33,EMP_051,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,API Key / Secret Credential Embeds,Clean,Approved,111 KB,106 KB
+LOG_0462,2026-10-09 11:38:58,EMP_185,Claude AI,claude.ai,443,Marketing Copy Generation,General Text Processing,Clean,Unapproved (Shadow AI),76 KB,468 KB
+LOG_0205,2026-10-09 11:40:01,EMP_144,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),4036 KB,255 KB
+LOG_0103,2026-10-09 11:41:09,EMP_184,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3336 KB,670 KB
+LOG_0101,2026-10-09 11:42:50,EMP_193,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),4194 KB,609 KB
+LOG_0094,2026-10-09 11:44:31,EMP_067,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),2040 KB,731 KB
+LOG_0350,2026-10-09 11:46:20,EMP_154,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),31 KB,519 KB
+LOG_0367,2026-10-09 11:46:25,EMP_144,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,General Text Processing,Clean,Unapproved (Rogue Local AI),110 KB,181 KB
+LOG_0332,2026-10-09 11:46:51,EMP_165,ChatGPT,chatgpt.com,443,Document & Report Summarization,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2531 KB,145 KB
+LOG_0052,2026-10-09 11:48:15,EMP_031,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Public Knowledge Query,Clean,Approved,62 KB,286 KB
+LOG_0497,2026-10-09 11:49:19,EMP_107,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),21 KB,292 KB
+LOG_0083,2026-10-09 12:02:14,EMP_057,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),663 KB,708 KB
+LOG_0184,2026-10-09 12:02:48,EMP_183,Claude AI,claude.ai,443,Marketing Copy Generation,Financial Data & Projections,Clean,Unapproved (Shadow AI),85 KB,284 KB
+LOG_0050,2026-10-09 12:03:35,EMP_032,Claude AI,claude.ai,443,Document & Report Summarization,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),3886 KB,688 KB
+LOG_0314,2026-10-09 12:05:36,EMP_128,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Financial Data & Projections,Clean,Approved,9 KB,286 KB
+LOG_0130,2026-10-09 12:06:28,EMP_192,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),4351 KB,313 KB
+LOG_0062,2026-10-09 12:07:36,EMP_046,Claude AI,claude.ai,443,Personal / Non-Work Research,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3101 KB,176 KB
+LOG_0200,2026-10-09 12:08:56,EMP_088,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Rogue Local AI),4199 KB,61 KB
+LOG_0159,2026-10-09 12:09:03,EMP_142,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Financial Data & Projections,Clean,Unapproved (Rogue Local AI),22 KB,521 KB
+LOG_0139,2026-10-09 12:09:42,EMP_144,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),4636 KB,381 KB
+LOG_0173,2026-10-09 12:15:24,EMP_108,ChatGPT,chatgpt.com,443,Legal Contract Analysis,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2690 KB,106 KB
+LOG_0308,2026-10-09 12:16:42,EMP_034,Ollama (Local LLM),localhost,11434,Legal Contract Analysis,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),3295 KB,606 KB
+LOG_0201,2026-10-09 12:19:10,EMP_068,OpenAI API,api.openai.com,443,Legal Contract Analysis,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2914 KB,536 KB
+LOG_0281,2026-10-09 12:22:03,EMP_174,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2870 KB,624 KB
+LOG_0425,2026-10-09 12:26:03,EMP_193,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),105 KB,588 KB
+LOG_0488,2026-10-09 12:34:14,EMP_004,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1260 KB,310 KB
+LOG_0416,2026-10-09 12:42:53,EMP_001,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),4026 KB,70 KB
+LOG_0199,2026-10-09 12:49:26,EMP_086,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Clean,Unapproved (Shadow AI),116 KB,482 KB
+LOG_0371,2026-10-09 12:50:31,EMP_050,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1553 KB,31 KB
+LOG_0470,2026-10-09 12:50:51,EMP_198,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,General Text Processing,Clean,Approved,100 KB,431 KB
+LOG_0274,2026-10-09 12:52:22,EMP_056,Microsoft Copilot,copilot.microsoft.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Clean,Approved,96 KB,420 KB
+LOG_0369,2026-10-09 12:56:35,EMP_125,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),3217 KB,145 KB
+LOG_0212,2026-10-09 12:56:53,EMP_067,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),960 KB,446 KB
+LOG_0246,2026-10-09 12:57:32,EMP_092,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),4284 KB,430 KB
+LOG_0397,2026-10-09 12:57:33,EMP_005,OpenAI API,api.openai.com,443,Document & Report Summarization,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1449 KB,221 KB
+LOG_0400,2026-10-09 12:58:55,EMP_118,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1305 KB,156 KB
+LOG_0186,2026-10-09 12:59:51,EMP_136,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Source Code Analysis,Clean,Unapproved (Rogue Local AI),109 KB,85 KB
+LOG_0088,2026-10-09 13:01:48,EMP_144,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4331 KB,672 KB
+LOG_0372,2026-10-09 13:01:57,EMP_012,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,General Text Processing,Clean,Approved,136 KB,371 KB
+LOG_0248,2026-10-09 13:02:27,EMP_070,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),18 KB,488 KB
+LOG_0435,2026-10-09 13:03:42,EMP_007,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Unapproved (Shadow AI),107 KB,459 KB
+LOG_0406,2026-10-09 13:05:12,EMP_099,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,General Text Processing,Clean,Unapproved (Rogue Local AI),125 KB,782 KB
+LOG_0009,2026-10-09 13:09:23,EMP_028,OpenAI API,api.openai.com,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4082 KB,24 KB
+LOG_0315,2026-10-09 13:10:49,EMP_140,Ollama (Local LLM),localhost,11434,Personal / Non-Work Research,API Key / Secret Credential Embeds,Clean,Unapproved (Rogue Local AI),29 KB,591 KB
+LOG_0337,2026-10-09 13:12:47,EMP_069,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Shadow AI),62 KB,511 KB
+LOG_0264,2026-10-09 13:13:25,EMP_032,Claude AI,claude.ai,443,Legal Contract Analysis,Financial Data & Projections,Clean,Unapproved (Shadow AI),120 KB,551 KB
+LOG_0268,2026-10-09 13:15:31,EMP_193,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,Financial Data & Projections,Unencrypted Source Code,Unapproved (Rogue Local AI),4098 KB,476 KB
+LOG_0196,2026-10-09 13:18:57,EMP_009,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),3041 KB,525 KB
+LOG_0344,2026-10-09 13:19:42,EMP_058,OpenAI API,api.openai.com,443,Document & Report Summarization,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),172 KB,172 KB
+LOG_0287,2026-10-09 13:20:55,EMP_057,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3256 KB,91 KB
+LOG_0457,2026-10-09 13:23:44,EMP_125,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1230 KB,739 KB
+LOG_0162,2026-10-09 13:24:18,EMP_017,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Clean,Approved,21 KB,601 KB
+LOG_0108,2026-10-09 13:24:39,EMP_174,Claude AI,claude.ai,443,Personal / Non-Work Research,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1982 KB,477 KB
+LOG_0272,2026-10-09 13:26:00,EMP_001,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),5 KB,519 KB
+LOG_0080,2026-10-09 13:26:38,EMP_068,Claude AI,claude.ai,443,Data Pipeline Transformation Scripting,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2515 KB,607 KB
+LOG_0311,2026-10-09 13:27:11,EMP_037,Ollama (Local LLM),localhost,11434,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),4091 KB,300 KB
+LOG_0033,2026-10-09 13:27:35,EMP_128,Azure OpenAI,azure.openai.com,443,Document & Report Summarization,Source Code Analysis,Clean,Approved,39 KB,563 KB
+LOG_0073,2026-10-09 13:27:47,EMP_036,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,Financial Data & Projections,Clean,Unapproved (Rogue Local AI),117 KB,282 KB
+LOG_0357,2026-10-09 13:32:08,EMP_174,Hugging Face Models,huggingface.co,443,Document & Report Summarization,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3643 KB,683 KB
+LOG_0301,2026-10-09 13:32:09,EMP_020,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,General Text Processing,Clean,Unapproved (Shadow AI),76 KB,430 KB
+LOG_0286,2026-10-09 13:32:26,EMP_148,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4620 KB,100 KB
+LOG_0023,2026-10-09 13:34:03,EMP_008,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,Source Code Analysis,Unencrypted Source Code,Unapproved (Shadow AI),3985 KB,519 KB
+LOG_0247,2026-10-09 13:35:29,EMP_042,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,General Text Processing,Clean,Unapproved (Shadow AI),1 KB,768 KB
+LOG_0326,2026-10-09 13:36:54,EMP_036,Ollama (Local LLM),localhost,11434,Legal Contract Analysis,Public Knowledge Query,Sensitive Code Detected,Unapproved (Rogue Local AI),456 KB,106 KB
+LOG_0267,2026-10-09 13:37:37,EMP_177,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),2782 KB,240 KB
+LOG_0482,2026-10-09 13:40:04,EMP_176,Claude AI,claude.ai,443,Customer Support Automated Replies,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),931 KB,215 KB
+LOG_0486,2026-10-09 13:41:46,EMP_068,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3010 KB,519 KB
+LOG_0069,2026-10-09 13:42:24,EMP_107,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1569 KB,504 KB
+LOG_0079,2026-10-09 13:43:03,EMP_010,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),777 KB,259 KB
+LOG_0275,2026-10-09 13:44:14,EMP_042,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),845 KB,420 KB
+LOG_0403,2026-10-09 13:44:25,EMP_056,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),483 KB,768 KB
+LOG_0031,2026-10-09 13:45:21,EMP_067,Claude AI,claude.ai,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2137 KB,57 KB
+LOG_0150,2026-10-09 13:45:40,EMP_078,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),250 KB,337 KB
+LOG_0115,2026-10-09 13:46:08,EMP_005,ChatGPT,chatgpt.com,443,Marketing Copy Generation,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1518 KB,210 KB
+LOG_0429,2026-10-09 13:46:23,EMP_005,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),226 KB,697 KB
+LOG_0461,2026-10-09 13:46:52,EMP_136,OpenAI API,api.openai.com,443,Document & Report Summarization,General Text Processing,Unencrypted Source Code,Unapproved (Shadow AI),2716 KB,521 KB
+LOG_0063,2026-10-09 13:47:45,EMP_142,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4820 KB,31 KB
+LOG_0401,2026-10-09 13:48:06,EMP_166,ChatGPT,chatgpt.com,443,Document & Report Summarization,Financial Data & Projections,Unencrypted Source Code,Unapproved (Shadow AI),2896 KB,425 KB
+LOG_0158,2026-10-09 13:50:47,EMP_107,Azure OpenAI,azure.openai.com,443,Personal / Non-Work Research,API Key / Secret Credential Embeds,Clean,Approved,49 KB,334 KB
+LOG_0029,2026-10-09 13:51:41,EMP_161,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),77 KB,684 KB
+LOG_0454,2026-10-09 13:52:05,EMP_160,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,Public Knowledge Query,Clean,Approved,117 KB,354 KB
+LOG_0187,2026-10-09 13:52:11,EMP_022,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Financial Data & Projections,Sensitive Code Detected,Unapproved (Rogue Local AI),735 KB,340 KB
+LOG_0277,2026-10-09 13:54:06,EMP_188,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Rogue Local AI),4723 KB,491 KB
+LOG_0064,2026-10-09 13:58:24,EMP_082,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),914 KB,718 KB
+LOG_0227,2026-10-09 13:59:50,EMP_171,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3312 KB,358 KB
+LOG_0297,2026-10-09 13:59:58,EMP_035,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Financial Data & Projections,Unencrypted Source Code,Unapproved (Shadow AI),4944 KB,658 KB
+LOG_0331,2026-10-09 14:00:00,EMP_069,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),3993 KB,77 KB
+LOG_0066,2026-10-09 14:00:54,EMP_028,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3047 KB,655 KB
+LOG_0131,2026-10-09 14:01:03,EMP_042,Ollama (Local LLM),localhost,11434,Data Pipeline Transformation Scripting,General Text Processing,Clean,Unapproved (Rogue Local AI),28 KB,507 KB
+LOG_0128,2026-10-09 14:01:08,EMP_073,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Internal PII / HR Documents,Clean,Approved,83 KB,21 KB
+LOG_0240,2026-10-09 14:03:42,EMP_192,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3401 KB,707 KB
+LOG_0244,2026-10-09 14:04:58,EMP_085,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),1736 KB,591 KB
+LOG_0395,2026-10-09 14:05:42,EMP_032,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),4615 KB,67 KB
+LOG_0106,2026-10-09 14:06:28,EMP_096,OpenAI API,api.openai.com,443,Marketing Copy Generation,Source Code Analysis,Clean,Unapproved (Shadow AI),84 KB,62 KB
+LOG_0215,2026-10-09 14:07:08,EMP_056,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Clean,Unapproved (Shadow AI),143 KB,379 KB
+LOG_0410,2026-10-09 14:07:43,EMP_108,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Financial Data & Projections,Clean,Approved,126 KB,613 KB
+LOG_0043,2026-10-09 14:07:46,EMP_012,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,Public Knowledge Query,Clean,Approved,105 KB,339 KB
+LOG_0077,2026-10-09 14:08:40,EMP_125,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Source Code Analysis,Clean,Unapproved (Rogue Local AI),73 KB,485 KB
+LOG_0319,2026-10-09 14:10:39,EMP_058,OpenAI API,api.openai.com,443,Customer Support Automated Replies,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4750 KB,364 KB
+LOG_0464,2026-10-09 14:12:13,EMP_036,Microsoft Copilot,copilot.microsoft.com,443,Legal Contract Analysis,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),1536 KB,520 KB
+LOG_0430,2026-10-09 14:15:14,EMP_001,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),3222 KB,520 KB
+LOG_0336,2026-10-09 14:15:35,EMP_118,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Public Knowledge Query,Clean,Approved,78 KB,215 KB
+LOG_0105,2026-10-09 14:15:40,EMP_005,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3635 KB,105 KB
+LOG_0493,2026-10-09 14:16:06,EMP_125,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1130 KB,692 KB
+LOG_0413,2026-10-09 14:17:41,EMP_140,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3963 KB,140 KB
+LOG_0141,2026-10-09 14:19:58,EMP_191,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),1253 KB,584 KB
+LOG_0465,2026-10-09 14:20:45,EMP_183,ChatGPT,chatgpt.com,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4854 KB,589 KB
+LOG_0164,2026-10-09 14:21:52,EMP_193,OpenAI API,api.openai.com,443,Document & Report Summarization,Public Knowledge Query,Clean,Unapproved (Shadow AI),131 KB,375 KB
+LOG_0384,2026-10-09 14:22:16,EMP_154,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Unapproved (Shadow AI),113 KB,755 KB
+LOG_0017,2026-10-09 14:22:27,EMP_017,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),886 KB,67 KB
+LOG_0375,2026-10-09 14:22:36,EMP_004,OpenAI API,api.openai.com,443,Customer Support Automated Replies,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1518 KB,507 KB
+LOG_0192,2026-10-09 14:23:23,EMP_150,Ollama (Local LLM),localhost,11434,Document & Report Summarization,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),4417 KB,380 KB
+LOG_0306,2026-10-09 14:25:01,EMP_096,Claude AI,claude.ai,443,Personal / Non-Work Research,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3265 KB,9 KB
+LOG_0067,2026-10-09 14:27:11,EMP_042,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Unapproved (Rogue Local AI),124 KB,481 KB
+LOG_0013,2026-10-09 14:28:57,EMP_093,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,Source Code Analysis,Sensitive Code Detected,Unapproved (Rogue Local AI),1920 KB,70 KB
+LOG_0046,2026-10-09 14:29:28,EMP_142,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),1470 KB,679 KB
+LOG_0120,2026-10-09 14:29:58,EMP_009,Microsoft Copilot,copilot.microsoft.com,443,Data Pipeline Transformation Scripting,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),451 KB,43 KB
+LOG_0136,2026-10-09 14:30:04,EMP_150,ChatGPT,chatgpt.com,443,Document & Report Summarization,Source Code Analysis,Clean,Unapproved (Shadow AI),25 KB,767 KB
+LOG_0347,2026-10-09 14:31:29,EMP_144,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),4723 KB,175 KB
+LOG_0146,2026-10-09 14:31:33,EMP_020,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4989 KB,61 KB
+LOG_0093,2026-10-09 14:31:40,EMP_192,Ollama (Local LLM),localhost,11434,Code Debugging & Refactoring,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Rogue Local AI),4579 KB,139 KB
+LOG_0153,2026-10-09 14:33:32,EMP_155,Claude AI,claude.ai,443,Legal Contract Analysis,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),2015 KB,110 KB
+LOG_0044,2026-10-09 14:35:08,EMP_035,Claude AI,claude.ai,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1505 KB,635 KB
+LOG_0262,2026-10-09 14:38:02,EMP_193,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),4007 KB,218 KB
+LOG_0449,2026-10-09 14:39:06,EMP_069,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3232 KB,157 KB
+LOG_0472,2026-10-09 14:41:23,EMP_096,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Rogue Local AI),2489 KB,464 KB
+LOG_0469,2026-10-09 14:43:47,EMP_081,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),144 KB,403 KB
+LOG_0495,2026-10-09 14:44:37,EMP_058,OpenAI API,api.openai.com,443,Legal Contract Analysis,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1461 KB,9 KB
+LOG_0022,2026-10-09 14:46:50,EMP_078,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Rogue Local AI),2510 KB,227 KB
+LOG_0299,2026-10-09 14:48:21,EMP_020,Hugging Face Models,huggingface.co,443,Document & Report Summarization,Source Code Analysis,Clean,Unapproved (Shadow AI),67 KB,232 KB
+LOG_0181,2026-10-09 14:49:37,EMP_167,Google Gemini,generativelanguage.googleapis.com,443,Employee Salary & Review Drafts,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4552 KB,351 KB
+LOG_0156,2026-10-09 14:50:17,EMP_128,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,API Key / Secret Credential Embeds,Clean,Approved,19 KB,322 KB
+LOG_0258,2026-10-09 14:50:33,EMP_045,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),2536 KB,390 KB
+LOG_0273,2026-10-09 14:51:58,EMP_032,OpenAI API,api.openai.com,443,Document & Report Summarization,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),2054 KB,201 KB
+LOG_0032,2026-10-09 14:53:17,EMP_039,Azure OpenAI,azure.openai.com,443,Code Debugging & Refactoring,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),2225 KB,170 KB
+LOG_0405,2026-10-09 14:55:14,EMP_032,OpenAI API,api.openai.com,443,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Shadow AI),83 KB,280 KB
+LOG_0261,2026-10-09 14:59:28,EMP_188,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),502 KB,279 KB
+LOG_0380,2026-10-09 14:59:39,EMP_160,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),3179 KB,319 KB
+LOG_0118,2026-10-09 15:00:16,EMP_039,LM Studio (Local LLM),127.0.0.1,1234,Document & Report Summarization,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),2227 KB,603 KB
+LOG_0346,2026-10-09 15:01:21,EMP_068,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2234 KB,734 KB
+LOG_0113,2026-10-09 15:03:58,EMP_088,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),91 KB,229 KB
+LOG_0001,2026-10-09 15:10:29,EMP_176,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),1879 KB,706 KB
+LOG_0148,2026-10-09 15:11:08,EMP_060,Hugging Face Models,huggingface.co,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),2981 KB,78 KB
+LOG_0499,2026-10-09 15:13:58,EMP_035,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Approved,139 KB,488 KB
+LOG_0026,2026-10-09 15:15:16,EMP_093,Hugging Face Models,huggingface.co,443,Employee Salary & Review Drafts,Public Knowledge Query,Clean,Unapproved (Shadow AI),118 KB,328 KB
+LOG_0353,2026-10-09 15:15:29,EMP_161,Google Gemini,generativelanguage.googleapis.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),1313 KB,11 KB
+LOG_0232,2026-10-09 15:18:20,EMP_034,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Approved,147 KB,242 KB
+LOG_0423,2026-10-09 15:19:26,EMP_140,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3879 KB,125 KB
+LOG_0218,2026-10-09 15:19:37,EMP_058,Google Gemini,generativelanguage.googleapis.com,443,Personal / Non-Work Research,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3970 KB,22 KB
+LOG_0451,2026-10-09 15:20:15,EMP_010,Google Gemini,generativelanguage.googleapis.com,443,Marketing Copy Generation,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4589 KB,663 KB
+LOG_0269,2026-10-09 15:22:10,EMP_162,OpenAI API,api.openai.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),561 KB,541 KB
+LOG_0290,2026-10-09 15:23:16,EMP_086,Claude AI,claude.ai,443,Personal / Non-Work Research,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),1681 KB,473 KB
+LOG_0500,2026-10-09 15:23:25,EMP_100,Claude AI,claude.ai,443,Marketing Copy Generation,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4185 KB,527 KB
+LOG_0006,2026-10-09 15:27:38,EMP_033,ChatGPT,chatgpt.com,443,Data Pipeline Transformation Scripting,General Text Processing,Clean,Unapproved (Shadow AI),136 KB,262 KB
+LOG_0155,2026-10-09 15:28:43,EMP_166,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),639 KB,485 KB
+LOG_0327,2026-10-09 15:29:01,EMP_189,ChatGPT,chatgpt.com,443,Employee Salary & Review Drafts,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),85 KB,443 KB
+LOG_0259,2026-10-09 15:30:15,EMP_019,Claude AI,claude.ai,443,Marketing Copy Generation,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),3873 KB,64 KB
+LOG_0438,2026-10-09 15:31:12,EMP_073,Claude AI,claude.ai,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),3012 KB,725 KB
+LOG_0171,2026-10-09 15:33:54,EMP_081,ChatGPT,chatgpt.com,443,Marketing Copy Generation,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),2314 KB,465 KB
+LOG_0408,2026-10-09 15:33:56,EMP_037,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Clean,Approved,52 KB,64 KB
+LOG_0300,2026-10-09 15:35:37,EMP_155,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Clean,Unapproved (Shadow AI),119 KB,795 KB
+LOG_0422,2026-10-09 15:35:48,EMP_177,OpenAI API,api.openai.com,443,Legal Contract Analysis,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),1900 KB,368 KB
+LOG_0140,2026-10-09 15:36:14,EMP_073,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),8 KB,189 KB
+LOG_0386,2026-10-09 15:36:41,EMP_086,Claude AI,claude.ai,443,Employee Salary & Review Drafts,General Text Processing,Clean,Unapproved (Shadow AI),9 KB,306 KB
+LOG_0237,2026-10-09 15:36:43,EMP_098,Claude AI,claude.ai,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3583 KB,532 KB
+LOG_0127,2026-10-09 15:38:00,EMP_184,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),2133 KB,183 KB
+LOG_0334,2026-10-09 15:40:47,EMP_171,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1859 KB,93 KB
+LOG_0061,2026-10-09 15:41:02,EMP_009,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),1328 KB,249 KB
+LOG_0466,2026-10-09 15:43:47,EMP_093,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),4362 KB,114 KB
+LOG_0333,2026-10-09 15:48:55,EMP_193,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),1424 KB,455 KB
+LOG_0220,2026-10-09 15:49:37,EMP_100,Claude AI,claude.ai,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1476 KB,541 KB
+LOG_0221,2026-10-09 15:49:53,EMP_189,Hugging Face Models,huggingface.co,443,Employee Salary & Review Drafts,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),338 KB,591 KB
+LOG_0018,2026-10-09 15:51:55,EMP_035,ChatGPT,chatgpt.com,443,Customer Support Automated Replies,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),4473 KB,464 KB
+LOG_0011,2026-10-09 15:52:04,EMP_174,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),122 KB,567 KB
+LOG_0322,2026-10-09 15:53:15,EMP_184,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Shadow AI),2281 KB,647 KB
+LOG_0343,2026-10-09 15:54:15,EMP_022,Azure OpenAI,azure.openai.com,443,Customer Support Automated Replies,Source Code Analysis,Clean,Unapproved (Shadow AI),30 KB,469 KB
+LOG_0378,2026-10-09 15:54:33,EMP_184,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4880 KB,108 KB
+LOG_0233,2026-10-09 15:54:59,EMP_176,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),377 KB,411 KB
+LOG_0116,2026-10-09 15:56:23,EMP_046,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Internal PII / HR Documents,Unencrypted Source Code,Unapproved (Rogue Local AI),4027 KB,307 KB
+LOG_0016,2026-10-09 15:56:36,EMP_046,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),1639 KB,101 KB
+LOG_0418,2026-10-09 15:57:03,EMP_069,Hugging Face Models,huggingface.co,443,Legal Contract Analysis,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),288 KB,676 KB
+LOG_0189,2026-10-09 15:58:22,EMP_006,Hugging Face Models,huggingface.co,443,Marketing Copy Generation,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),694 KB,692 KB
+LOG_0223,2026-10-09 15:58:30,EMP_028,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Clean,Approved,54 KB,579 KB
+LOG_0007,2026-10-09 16:00:43,EMP_036,ChatGPT,chatgpt.com,443,Marketing Copy Generation,Public Knowledge Query,Clean,Unapproved (Shadow AI),29 KB,305 KB
+LOG_0204,2026-10-09 16:01:05,EMP_006,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,Public Knowledge Query,Clean,Approved,54 KB,790 KB
+LOG_0149,2026-10-09 16:02:27,EMP_108,Azure OpenAI,azure.openai.com,443,Personal / Non-Work Research,Source Code Analysis,Clean,Approved,81 KB,594 KB
+LOG_0015,2026-10-09 16:04:32,EMP_005,Claude AI,claude.ai,443,Marketing Copy Generation,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1835 KB,557 KB
+LOG_0270,2026-10-09 16:04:52,EMP_005,Azure OpenAI,azure.openai.com,443,Code Debugging & Refactoring,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1975 KB,74 KB
+LOG_0366,2026-10-09 16:05:57,EMP_128,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,Source Code Analysis,Clean,Unapproved (Shadow AI),13 KB,177 KB
+LOG_0020,2026-10-09 16:05:59,EMP_183,Claude AI,claude.ai,443,Employee Salary & Review Drafts,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4023 KB,223 KB
+LOG_0321,2026-10-09 16:08:48,EMP_020,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),1167 KB,260 KB
+LOG_0202,2026-10-09 16:16:12,EMP_067,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),78 KB,634 KB
+LOG_0229,2026-10-09 16:17:59,EMP_034,LM Studio (Local LLM),127.0.0.1,1234,Marketing Copy Generation,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Rogue Local AI),4887 KB,250 KB
+LOG_0236,2026-10-09 16:21:10,EMP_018,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,Public Knowledge Query,Sensitive Code Detected,Unapproved (Rogue Local AI),195 KB,759 KB
+LOG_0420,2026-10-09 16:21:46,EMP_144,Claude AI,claude.ai,443,Personal / Non-Work Research,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4235 KB,312 KB
+LOG_0119,2026-10-09 16:23:06,EMP_193,Claude AI,claude.ai,443,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Shadow AI),57 KB,668 KB
+LOG_0280,2026-10-09 16:24:43,EMP_166,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,General Text Processing,Clean,Unapproved (Rogue Local AI),36 KB,710 KB
+LOG_0135,2026-10-09 16:25:26,EMP_098,ChatGPT,chatgpt.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2168 KB,388 KB
+LOG_0396,2026-10-09 16:26:34,EMP_185,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,General Text Processing,Unencrypted Source Code,Unapproved (Rogue Local AI),726 KB,409 KB
+LOG_0185,2026-10-09 16:27:56,EMP_068,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1610 KB,513 KB
+LOG_0117,2026-10-09 16:29:04,EMP_098,OpenAI API,api.openai.com,443,Customer Support Automated Replies,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4645 KB,379 KB
+LOG_0415,2026-10-09 16:29:16,EMP_193,Claude AI,claude.ai,443,Personal / Non-Work Research,Financial Data & Projections,Clean,Unapproved (Shadow AI),150 KB,109 KB
+LOG_0177,2026-10-09 16:31:38,EMP_073,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Rogue Local AI),148 KB,252 KB
+LOG_0096,2026-10-09 16:31:59,EMP_045,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,General Text Processing,Clean,Approved,124 KB,488 KB
+LOG_0217,2026-10-09 16:33:29,EMP_188,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Clean,Unapproved (Shadow AI),42 KB,407 KB
+LOG_0091,2026-10-09 16:35:02,EMP_035,Ollama (Local LLM),localhost,11434,Document & Report Summarization,Financial Data & Projections,Unencrypted Source Code,Unapproved (Rogue Local AI),2728 KB,123 KB
+LOG_0137,2026-10-09 16:35:03,EMP_097,LM Studio (Local LLM),127.0.0.1,1234,Legal Contract Analysis,Public Knowledge Query,Sensitive Code Detected,Unapproved (Rogue Local AI),3445 KB,367 KB
+LOG_0313,2026-10-09 16:35:32,EMP_018,Ollama (Local LLM),localhost,11434,Data Pipeline Transformation Scripting,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),3484 KB,732 KB
+LOG_0363,2026-10-09 16:35:47,EMP_035,LM Studio (Local LLM),127.0.0.1,1234,Customer Support Automated Replies,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),914 KB,148 KB
+LOG_0068,2026-10-09 16:37:17,EMP_022,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,Source Code Analysis,Clean,Unapproved (Shadow AI),116 KB,254 KB
+LOG_0034,2026-10-09 16:37:35,EMP_005,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Internal PII / HR Documents,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2605 KB,378 KB
+LOG_0065,2026-10-09 16:38:51,EMP_161,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Financial Data & Projections,Clean,Unapproved (Shadow AI),95 KB,75 KB
+LOG_0151,2026-10-09 16:39:29,EMP_162,Google Gemini,generativelanguage.googleapis.com,443,Document & Report Summarization,General Text Processing,Clean,Unapproved (Shadow AI),63 KB,451 KB
+LOG_0002,2026-10-09 16:49:03,EMP_051,Claude AI,claude.ai,443,Code Debugging & Refactoring,Financial Data & Projections,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2273 KB,72 KB
+LOG_0039,2026-10-09 16:49:17,EMP_118,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),2792 KB,33 KB
+LOG_0445,2026-10-09 16:51:26,EMP_136,OpenAI API,api.openai.com,443,Document & Report Summarization,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),41 KB,111 KB
+LOG_0170,2026-10-09 16:51:38,EMP_033,OpenAI API,api.openai.com,443,Marketing Copy Generation,Source Code Analysis,Clean,Unapproved (Shadow AI),96 KB,572 KB
+LOG_0092,2026-10-09 16:52:00,EMP_035,LM Studio (Local LLM),127.0.0.1,1234,Personal / Non-Work Research,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),1616 KB,535 KB
+LOG_0407,2026-10-09 16:52:03,EMP_069,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Source Code Analysis,Unencrypted Source Code,Unapproved (Rogue Local AI),4231 KB,418 KB
+LOG_0455,2026-10-09 16:52:14,EMP_192,Ollama (Local LLM),localhost,11434,Legal Contract Analysis,API Key / Secret Credential Embeds,Clean,Unapproved (Rogue Local AI),122 KB,738 KB
+LOG_0104,2026-10-09 16:54:43,EMP_174,LM Studio (Local LLM),127.0.0.1,1234,Data Pipeline Transformation Scripting,Financial Data & Projections,Clean,Unapproved (Rogue Local AI),125 KB,559 KB
+LOG_0102,2026-10-09 16:55:54,EMP_188,Ollama (Local LLM),localhost,11434,Document & Report Summarization,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),205 KB,744 KB
+LOG_0421,2026-10-09 16:56:35,EMP_162,OpenAI API,api.openai.com,443,Marketing Copy Generation,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1128 KB,763 KB
+LOG_0483,2026-10-09 16:56:47,EMP_176,Hugging Face Models,huggingface.co,443,Document & Report Summarization,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),274 KB,475 KB
+LOG_0447,2026-10-09 16:56:53,EMP_004,OpenAI API,api.openai.com,443,Personal / Non-Work Research,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),3449 KB,456 KB
+LOG_0194,2026-10-09 17:07:16,EMP_185,Microsoft Copilot,copilot.microsoft.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),126 KB,209 KB
+LOG_0021,2026-10-09 17:10:24,EMP_035,Azure OpenAI,azure.openai.com,443,Data Pipeline Transformation Scripting,Financial Data & Projections,Clean,Approved,117 KB,297 KB
+LOG_0351,2026-10-09 17:11:14,EMP_020,LM Studio (Local LLM),127.0.0.1,1234,Code Debugging & Refactoring,General Text Processing,Sensitive Code Detected,Unapproved (Rogue Local AI),3890 KB,294 KB
+LOG_0089,2026-10-09 17:11:37,EMP_128,Hugging Face Models,huggingface.co,443,Personal / Non-Work Research,Source Code Analysis,Clean,Unapproved (Shadow AI),90 KB,423 KB
+LOG_0498,2026-10-09 17:12:16,EMP_037,ChatGPT,chatgpt.com,443,Document & Report Summarization,Source Code Analysis,Confidential PII / HR Records Detected,Unapproved (Shadow AI),4846 KB,597 KB
+LOG_0035,2026-10-09 17:13:43,EMP_006,Claude AI,claude.ai,443,Document & Report Summarization,Financial Data & Projections,Clean,Unapproved (Shadow AI),40 KB,247 KB
+LOG_0288,2026-10-09 17:15:36,EMP_160,LM Studio (Local LLM),127.0.0.1,1234,Employee Salary & Review Drafts,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),1468 KB,147 KB
+LOG_0040,2026-10-09 17:16:11,EMP_073,Microsoft Copilot,copilot.microsoft.com,443,Code Debugging & Refactoring,Source Code Analysis,Clean,Unapproved (Shadow AI),89 KB,751 KB
+LOG_0266,2026-10-09 17:23:20,EMP_012,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Shadow AI),1275 KB,21 KB
+LOG_0161,2026-10-09 17:24:26,EMP_097,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Shadow AI),17 KB,342 KB
+LOG_0446,2026-10-09 17:30:51,EMP_099,Ollama (Local LLM),localhost,11434,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),3017 KB,631 KB
+LOG_0003,2026-10-09 17:36:56,EMP_070,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3321 KB,663 KB
+LOG_0450,2026-10-09 17:39:03,EMP_160,Azure OpenAI,azure.openai.com,443,Employee Salary & Review Drafts,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),127 KB,174 KB
+LOG_0441,2026-10-09 17:41:14,EMP_017,Ollama (Local LLM),localhost,11434,Marketing Copy Generation,Financial Data & Projections,Unencrypted Source Code,Unapproved (Rogue Local AI),490 KB,107 KB
+LOG_0213,2026-10-09 17:46:23,EMP_037,Hugging Face Models,huggingface.co,443,Legal Contract Analysis,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),499 KB,588 KB
+LOG_0243,2026-10-09 17:48:34,EMP_036,Claude AI,claude.ai,443,Customer Support Automated Replies,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),4384 KB,462 KB
+LOG_0489,2026-10-09 17:50:55,EMP_020,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Shadow AI),1238 KB,131 KB
+LOG_0085,2026-10-09 17:52:09,EMP_150,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),146 KB,300 KB
+LOG_0442,2026-10-09 17:54:18,EMP_119,Google Gemini,generativelanguage.googleapis.com,443,Legal Contract Analysis,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),858 KB,781 KB
+LOG_0491,2026-10-09 17:54:32,EMP_102,OpenAI API,api.openai.com,443,Employee Salary & Review Drafts,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),2150 KB,203 KB
+LOG_0399,2026-10-09 17:58:51,EMP_012,ChatGPT,chatgpt.com,443,Document & Report Summarization,General Text Processing,Clean,Unapproved (Shadow AI),142 KB,338 KB
+LOG_0365,2026-10-09 18:05:37,EMP_189,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,Source Code Analysis,Clean,Unapproved (Shadow AI),51 KB,666 KB
+LOG_0030,2026-10-09 18:08:16,EMP_081,ChatGPT,chatgpt.com,443,Document & Report Summarization,Public Knowledge Query,Unencrypted Source Code,Unapproved (Shadow AI),1353 KB,283 KB
+LOG_0295,2026-10-09 18:13:28,EMP_107,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1220 KB,653 KB
+LOG_0123,2026-10-09 18:17:02,EMP_102,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,General Text Processing,Clean,Unapproved (Shadow AI),61 KB,376 KB
+LOG_0235,2026-10-09 18:21:18,EMP_081,Ollama (Local LLM),localhost,11434,Personal / Non-Work Research,Internal PII / HR Documents,Clean,Unapproved (Rogue Local AI),120 KB,284 KB
+LOG_0122,2026-10-09 18:26:37,EMP_032,OpenAI API,api.openai.com,443,Data Pipeline Transformation Scripting,Public Knowledge Query,Sensitive Code Detected,Unapproved (Shadow AI),4088 KB,635 KB
+LOG_0138,2026-10-09 18:27:55,EMP_093,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,API Key / Secret Credential Embeds,Clean,Unapproved (Shadow AI),91 KB,111 KB
+LOG_0285,2026-10-09 18:28:23,EMP_001,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,Internal PII / HR Documents,Sensitive Code Detected,Unapproved (Shadow AI),1615 KB,446 KB
+LOG_0211,2026-10-09 18:32:29,EMP_039,Claude AI,claude.ai,443,Customer Support Automated Replies,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),478 KB,56 KB
+LOG_0042,2026-10-09 18:34:43,EMP_069,Claude AI,claude.ai,443,Legal Contract Analysis,General Text Processing,Clean,Unapproved (Shadow AI),85 KB,643 KB
+LOG_0025,2026-10-09 18:36:15,EMP_068,Azure OpenAI,azure.openai.com,443,Document & Report Summarization,General Text Processing,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),2216 KB,214 KB
+LOG_0382,2026-10-09 18:39:14,EMP_012,ChatGPT,chatgpt.com,443,Personal / Non-Work Research,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),20 KB,248 KB
+LOG_0253,2026-10-09 18:46:48,EMP_018,ChatGPT,chatgpt.com,443,Code Debugging & Refactoring,Public Knowledge Query,Clean,Unapproved (Shadow AI),5 KB,251 KB
+LOG_0084,2026-10-09 18:50:50,EMP_165,Claude AI,claude.ai,443,Data Pipeline Transformation Scripting,Source Code Analysis,Unencrypted Source Code,Unapproved (Shadow AI),1921 KB,668 KB
+LOG_0028,2026-10-09 18:56:04,EMP_046,Claude AI,claude.ai,443,Legal Contract Analysis,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),3669 KB,561 KB
+LOG_0241,2026-10-09 18:56:45,EMP_028,Microsoft Copilot,copilot.microsoft.com,443,Document & Report Summarization,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3090 KB,634 KB
+LOG_0010,2026-10-09 18:56:53,EMP_073,Microsoft Copilot,copilot.microsoft.com,443,Customer Support Automated Replies,Source Code Analysis,Sensitive Code Detected,Unapproved (Shadow AI),4727 KB,85 KB
+LOG_0404,2026-10-09 18:57:23,EMP_031,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Financial Data & Projections,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2376 KB,508 KB
+LOG_0356,2026-10-09 18:57:54,EMP_006,LM Studio (Local LLM),127.0.0.1,1234,Data Pipeline Transformation Scripting,Public Knowledge Query,Unencrypted Source Code,Unapproved (Rogue Local AI),3835 KB,770 KB
+LOG_0362,2026-10-09 19:25:32,EMP_154,Azure OpenAI,azure.openai.com,443,Marketing Copy Generation,Financial Data & Projections,Clean,Approved,45 KB,36 KB
+LOG_0282,2026-10-09 19:25:49,EMP_058,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,Public Knowledge Query,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),3770 KB,507 KB
+LOG_0345,2026-10-09 19:33:33,EMP_060,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),2281 KB,755 KB
+LOG_0385,2026-10-09 19:56:26,EMP_099,Ollama (Local LLM),localhost,11434,Data Pipeline Transformation Scripting,Financial Data & Projections,Clean,Unapproved (Rogue Local AI),97 KB,108 KB
+LOG_0292,2026-10-09 20:08:19,EMP_100,Google Gemini,generativelanguage.googleapis.com,443,Customer Support Automated Replies,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1535 KB,412 KB
+LOG_0342,2026-10-09 20:09:34,EMP_066,Google Gemini,generativelanguage.googleapis.com,443,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2620 KB,720 KB
+LOG_0180,2026-10-09 20:16:47,EMP_185,Azure OpenAI,azure.openai.com,443,Legal Contract Analysis,Source Code Analysis,Clean,Approved,89 KB,251 KB
+LOG_0124,2026-10-09 20:23:34,EMP_017,Google Gemini,generativelanguage.googleapis.com,443,Code Debugging & Refactoring,General Text Processing,Clean,Unapproved (Shadow AI),49 KB,130 KB
+LOG_0058,2026-10-09 20:34:01,EMP_046,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Source Code Analysis,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),1191 KB,477 KB
+LOG_0168,2026-10-09 20:39:18,EMP_198,Ollama (Local LLM),localhost,11434,Customer Support Automated Replies,API Key / Secret Credential Embeds,Sensitive Code Detected,Unapproved (Rogue Local AI),2615 KB,485 KB
+LOG_0036,2026-10-09 20:51:11,EMP_033,Hugging Face Models,huggingface.co,443,Code Debugging & Refactoring,Internal PII / HR Documents,Clean,Unapproved (Shadow AI),106 KB,690 KB
+LOG_0473,2026-10-09 21:04:11,EMP_119,OpenAI API,api.openai.com,443,Document & Report Summarization,General Text Processing,Sensitive Code Detected,Unapproved (Shadow AI),3590 KB,290 KB
+LOG_0383,2026-10-09 21:10:40,EMP_171,ChatGPT,chatgpt.com,443,Legal Contract Analysis,General Text Processing,Confidential PII / HR Records Detected,Unapproved (Shadow AI),2252 KB,219 KB
+LOG_0051,2026-10-09 22:38:20,EMP_085,Ollama (Local LLM),localhost,11434,Data Pipeline Transformation Scripting,API Key / Secret Credential Embeds,Unencrypted Source Code,Unapproved (Rogue Local AI),1383 KB,766 KB
+LOG_0417,2026-10-09 22:40:20,EMP_098,Microsoft Copilot,copilot.microsoft.com,443,Marketing Copy Generation,Public Knowledge Query,Confidential PII / HR Records Detected,Unapproved (Shadow AI),1623 KB,158 KB
+LOG_0121,2026-10-09 23:07:06,EMP_161,Claude AI,claude.ai,443,Employee Salary & Review Drafts,General Text Processing,Clean,Unapproved (Shadow AI),95 KB,691 KB
+LOG_0373,2026-10-09 23:10:06,EMP_092,Claude AI,claude.ai,443,Customer Support Automated Replies,Financial Data & Projections,Sensitive Code Detected,Unapproved (Shadow AI),1877 KB,594 KB
+LOG_0419,2026-10-09 23:16:58,EMP_060,Hugging Face Models,huggingface.co,443,Data Pipeline Transformation Scripting,General Text Processing,Clean,Unapproved (Shadow AI),150 KB,730 KB
+LOG_0224,2026-10-09 23:30:33,EMP_051,Hugging Face Models,huggingface.co,443,Legal Contract Analysis,Internal PII / HR Documents,Financial Secrets / Credentials Detected,Unapproved (Shadow AI),4447 KB,355 KB
+LOG_0328,2026-10-09 23:58:08,EMP_034,Microsoft Copilot,copilot.microsoft.com,443,Employee Salary & Review Drafts,Financial Data & Projections,Clean,Approved,24 KB,675 KB
