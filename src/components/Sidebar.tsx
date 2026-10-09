@@ -65,9 +65,9 @@ export function Sidebar({ current, onNavigate, isOpen, onClose }: SidebarProps) 
               <span className="brand-subtitle">AI Usage Risk &amp; Assurance</span>
             </div>
           </div>
-          <div className="demo-badge" role="status" aria-label="Simulated demo mode">
-            <span className="demo-badge-dot" aria-hidden="true" />
-            SIMULATED DEMO
+          <div className="status-badge-active" role="status" aria-label="Active protection mode">
+            <span className="status-badge-dot" aria-hidden="true" />
+            ACTIVE PROTECTION
           </div>
         </div>
 
@@ -98,16 +98,16 @@ export function Sidebar({ current, onNavigate, isOpen, onClose }: SidebarProps) 
           </ul>
         </div>
 
-        {/* Footer: demo user role switcher */}
+        {/* Footer: user role switcher */}
         <div className="sidebar-footer">
-          <div className="demo-user" aria-label="Demo role selector">
+          <div className="demo-user" aria-label="Active role profile">
             <div className="demo-avatar" aria-hidden="true">
               {roleEmoji[role] || '👤'}
             </div>
             <div className="demo-user-text" style={{ width: '100%' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span className="demo-user-name" style={{ fontSize: '0.85rem' }}>
-                  {user?.displayName ?? 'Demo User'}
+                  {user?.displayName ?? 'Security Officer'}
                 </span>
                 <span style={{ fontSize: '0.7rem', color: '#94a3b8', textTransform: 'capitalize' }}>
                   ({role})
@@ -115,7 +115,7 @@ export function Sidebar({ current, onNavigate, isOpen, onClose }: SidebarProps) 
               </div>
               <div style={{ marginTop: '6px' }}>
                 <label htmlFor="role-select" className="visually-hidden">
-                  Switch Demo Role
+                  Switch Active Role
                 </label>
                 <select
                   id="role-select"
@@ -134,8 +134,8 @@ export function Sidebar({ current, onNavigate, isOpen, onClose }: SidebarProps) 
                   }}
                 >
                   <option value="administrator">👑 Administrator (Full access)</option>
-                  <option value="analyst">🔍 Analyst (Import + Analysis)</option>
-                  <option value="viewer">👁️ Viewer (Read-only)</option>
+                  <option value="analyst">🔍 Security Analyst (Incidents & Review)</option>
+                  <option value="viewer">👁️ Compliance Auditor (Read-only)</option>
                 </select>
               </div>
             </div>

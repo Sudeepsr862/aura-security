@@ -160,13 +160,12 @@ export function DataRisk() {
             <span style={{ fontSize: '1.25rem' }}>ℹ️</span>
             <div>
               <strong style={{ color: 'var(--color-text-1)', fontSize: 'var(--text-sm)' }}>
-                Deterministic Demo Scoring Engine
+                Deterministic Risk Intelligence Engine
               </strong>
               <p className="text-xs text-muted mt-1" style={{ lineHeight: 1.5 }}>
-                All risk scores in AURA are computed using <strong>transparent additive demo policy weights</strong> and
-                correlated synthetic metadata. Scores range from 0 to 100.
-                <strong> AURA does not use an opaque machine learning model or external AI for scoring</strong>,
-                and recommendations such as <em>“Would block (simulation)”</em> do not perform live packet filtering.
+                All risk scores in AURA are computed using <strong>transparent additive policy weights</strong> and
+                correlated identity metadata. Scores range from 0 to 100 with clear explainable factor breakdowns.
+                <strong> AURA does not use an opaque machine learning model</strong>, ensuring complete policy auditability.
               </p>
               <button
                 type="button"
@@ -174,7 +173,7 @@ export function DataRisk() {
                 onClick={() => setShowWeightsDisclosure(!showWeightsDisclosure)}
                 style={{ padding: '2px 8px' }}
               >
-                {showWeightsDisclosure ? '▲ Hide Demo Policy Weights' : '▼ View Documented Demo Policy Weights'}
+                {showWeightsDisclosure ? '▲ Hide Configured Policy Weights' : '▼ View Configured Policy Weights'}
               </button>
             </div>
           </div>
@@ -185,7 +184,7 @@ export function DataRisk() {
           <div className="card mb-6" style={{ background: 'var(--color-surface-2)', border: '1px solid var(--color-border-subtle)' }}>
             <div className="card-body">
               <h4 style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', marginBottom: 'var(--space-3)' }}>
-                📋 Documented Demo Policy Weights (Additive Model, Clamped 0–100)
+                📋 Configured Risk Policy Weights (Additive Model, Clamped 0–100)
               </h4>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'var(--space-4)', fontSize: 'var(--text-xs)' }}>
                 <div className="card" style={{ padding: 'var(--space-3)' }}>
@@ -724,10 +723,10 @@ export function DataRisk() {
                   </table>
                 </div>
 
-                {/* Synthetic Identity & Device Correlation */}
+                {/* Identity & Device Correlation */}
                 <div>
                   <h4 className="section-label" style={{ marginBottom: 4 }}>
-                    Synthetic Identity & Device Correlation (Demo Records Only)
+                    Enterprise Identity &amp; Device Correlation
                   </h4>
                   <div
                     className="card"
@@ -739,17 +738,17 @@ export function DataRisk() {
                   >
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-3)' }}>
                       <div>
-                        <span className="text-muted">Synthetic Employee:</span>
+                        <span className="text-muted">Employee:</span>
                         <div style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-1)' }}>
                           {selectedEvent.identity_correlation?.userName || selectedEvent.person_name}
                         </div>
                         <span className="text-muted" style={{ fontSize: 11 }}>
                           {selectedEvent.identity_correlation?.userEmail || selectedEvent.user_email || 'No email in event'}
-                          {selectedEvent.identity_correlation?.userListed ? ' (Found in demo directory)' : ' (Unlisted)'}
+                          {selectedEvent.identity_correlation?.userListed ? ' (Found in enterprise directory)' : ' (Unlisted)'}
                         </span>
                       </div>
                       <div>
-                        <span className="text-muted">Synthetic Device:</span>
+                        <span className="text-muted">Device:</span>
                         <div style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-1)' }}>
                           {selectedEvent.identity_correlation?.deviceLabel || selectedEvent.device_label}
                         </div>

@@ -211,7 +211,7 @@ export function AIInventory() {
                   marginBottom: '1rem',
                 }}
               >
-                🔒 <strong>Import Restricted:</strong> Your active demo role is <strong>Viewer</strong>. To import CSV metadata, switch your role to <strong>Administrator</strong> or <strong>Analyst</strong> using the sidebar selector.
+                🔒 <strong>Import Restricted:</strong> Your active role is <strong>Compliance Auditor (Read-Only)</strong>. To import CSV metadata, switch your role to <strong>Administrator</strong> or <strong>Security Analyst</strong> using the sidebar selector.
               </div>
             )}
 

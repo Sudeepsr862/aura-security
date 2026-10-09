@@ -1,7 +1,19 @@
 // ─── AURA Browser AI Guard: Background Service Worker ───────────────────────
 // Handles storage, heartbeat tracking, and telemetry dispatch to AURA dashboard.
 
-const AURA_API_BASE = 'http://127.0.0.1:3001/api/extension';
+const DEFAULT_AURA_API_BASE = 'http://127.0.0.1:3001/api/extension';
+
+/**
+ * Get active API endpoint (custom proxy or default).
+ */
+async function getApiBase() {
+  try {
+    const res = await chrome.storage.local.get(['aura_api_base']);
+    return res.aura_api_base || DEFAULT_AURA_API_BASE;
+  } catch {
+    return DEFAULT_AURA_API_BASE;
+  }
+}
 
 // In-memory cache of domain protection status
 const domainStatusCache = new Map();
@@ -11,8 +23,12 @@ const domainStatusCache = new Map();
  */
 async function syncCatalogWithServer() {
   try {
-    const res = await fetch(`${AURA_API_BASE}/sites`, {
-      headers: { 'Accept': 'application/json' },
+    const apiBase = await getApiBase();
+    const res = await fetch(`${apiBase}/sites`, {
+      headers: {
+        'Accept': 'application/json',
+        'X-Forwarded-Client': 'AURA-Chrome-Extension/1.0.0',
+      },
     });
     if (res.ok) {
       const data = await res.json();
@@ -43,7 +59,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     });
 
     // Notify server of active heartbeat
-    fetch(`${AURA_API_BASE}/sites`, { method: 'GET' }).catch(() => {});
+    getApiBase().then((apiBase) => {
+      fetch(`${apiBase}/sites`, {
+        method: 'GET',
+        headers: { 'X-Forwarded-Client': 'AURA-Chrome-Extension/1.0.0' },
+      }).catch(() => {});
+    });
     sendResponse({ success: true });
     return true;
   }
@@ -63,20 +84,25 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       chrome.storage.local.set({ aura_local_events: list.slice(0, 50) });
     });
 
-    // Forward to AURA Dashboard API
-    fetch(`${AURA_API_BASE}/events`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(eventData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        sendResponse({ success: true, serverResponse: data });
+    // Forward to AURA Dashboard API through proxy / gateway
+    getApiBase().then((apiBase) => {
+      fetch(`${apiBase}/events`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Forwarded-Client': 'AURA-Chrome-Extension/1.0.0',
+        },
+        body: JSON.stringify(eventData),
       })
-      .catch((err) => {
-        console.warn('[AURA Background] Could not forward event to AURA server:', err.message);
-        sendResponse({ success: true, offline: true });
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          sendResponse({ success: true, serverResponse: data });
+        })
+        .catch((err) => {
+          console.warn('[AURA Background] Could not forward event to AURA server:', err.message);
+          sendResponse({ success: true, offline: true });
+        });
+    });
 
     return true; // Keep message channel open for async response
   }

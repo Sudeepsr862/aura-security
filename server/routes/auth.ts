@@ -52,23 +52,25 @@ authRouter.post('/signin', (req, res) => {
 
   appendAudit(db, user.username, 'session.create', { role });
 
-  // Set HttpOnly SameSite=Strict cookie (local demo only)
+  // Set HttpOnly SameSite=Lax cookie (compatible with reverse proxies and modern browser security)
+  const isHttps = req.secure || req.headers['x-forwarded-proto'] === 'https';
   res.cookie('aura_session', rawToken, {
     httpOnly:  true,
-    sameSite:  'strict',
-    secure:    false,   // local only — would be true in production
+    sameSite:  'lax',
+    secure:    Boolean(isHttps),
     maxAge:    SESSION_TTL_HOURS * 3600 * 1000,
     path:      '/',
   });
 
   return res.json({
+    token: rawToken,
     user: {
       username:    user.username,
       displayName: user.display_name,
       role:        user.role,
     },
     expiresAt: expires,
-    demoNote:  'This is non-production demo authentication for role demonstration only.',
+    sessionStatus: 'active',
   });
 });
 

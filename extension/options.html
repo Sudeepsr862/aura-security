@@ -146,6 +146,22 @@
       </div>
     </div>
 
+    <!-- Proxy & API Gateway Configuration -->
+    <div class="card" style="border-left: 4px solid #38bdf8;">
+      <h2 class="card-title"><span>🌐</span> Proxy &amp; API Gateway Configuration</h2>
+      <p style="color: #94a3b8; font-size: 13px; margin-top: -6px;">
+        Specify the upstream API server or reverse proxy endpoint for enterprise deployments.
+      </p>
+      <div style="display: flex; gap: 10px; align-items: flex-end;">
+        <div class="form-group" style="flex: 1;">
+          <label for="proxy-api-base">AURA API Endpoint / Proxy Gateway URL</label>
+          <input type="text" id="proxy-api-base" placeholder="http://127.0.0.1:3001/api/extension or https://proxy.corp.internal/api/extension" />
+        </div>
+        <button id="btn-save-proxy" class="btn btn-primary">Save &amp; Test Connection</button>
+      </div>
+      <div id="proxy-status-message" style="margin-top: 8px; font-size: 12px;"></div>
+    </div>
+
     <!-- Add Site Section -->
     <div class="card">
       <h2 class="card-title"><span>+</span> Add AI Service Domain</h2>

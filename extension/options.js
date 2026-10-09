@@ -21,10 +21,22 @@ const DEFAULT_SITES = [
 
 let catalog = [];
 
+async function getActiveApiBase() {
+  try {
+    const res = await chrome.storage.local.get(['aura_api_base']);
+    return res.aura_api_base || AURA_API_BASE;
+  } catch {
+    return AURA_API_BASE;
+  }
+}
+
 async function loadSites() {
+  const apiBase = await getActiveApiBase();
   // Try loading from server first
   try {
-    const res = await fetch(`${AURA_API_BASE}/sites`);
+    const res = await fetch(`${apiBase}/sites`, {
+      headers: { 'X-Forwarded-Client': 'AURA-Chrome-Extension/1.0.0' }
+    });
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data.sites) && data.sites.length > 0) {
@@ -157,6 +169,51 @@ document.getElementById('btn-run-test').addEventListener('click', () => {
       🔒 Tested strictly in-memory. Zero secrets or raw texts persisted or transmitted.
     </div>
   `;
+});
+
+// Proxy & API Gateway Configuration
+chrome.storage.local.get(['aura_api_base'], (res) => {
+  const input = document.getElementById('proxy-api-base');
+  if (input) {
+    input.value = res.aura_api_base || AURA_API_BASE;
+  }
+});
+
+document.getElementById('btn-save-proxy')?.addEventListener('click', async () => {
+  const input = document.getElementById('proxy-api-base');
+  const msgEl = document.getElementById('proxy-status-message');
+  const targetUrl = (input.value || '').trim() || AURA_API_BASE;
+
+  if (msgEl) {
+    msgEl.textContent = 'Testing connection through proxy...';
+    msgEl.style.color = '#94a3b8';
+  }
+
+  try {
+    const res = await fetch(`${targetUrl}/sites`, {
+      headers: { 'X-Forwarded-Client': 'AURA-Chrome-Extension/1.0.0' },
+    });
+    if (res.ok) {
+      await chrome.storage.local.set({ aura_api_base: targetUrl });
+      if (msgEl) {
+        msgEl.textContent = '✓ Successfully connected to AURA API (200 OK). Proxy configuration saved!';
+        msgEl.style.color = '#4ade80';
+      }
+      loadSites();
+    } else {
+      await chrome.storage.local.set({ aura_api_base: targetUrl });
+      if (msgEl) {
+        msgEl.textContent = `Server responded with HTTP ${res.status}. Configuration saved.`;
+        msgEl.style.color = '#fbbf24';
+      }
+    }
+  } catch (err) {
+    await chrome.storage.local.set({ aura_api_base: targetUrl });
+    if (msgEl) {
+      msgEl.textContent = `⚠️ Connection notice: ${err.message}. Configuration saved for offline/proxy use.`;
+      msgEl.style.color = '#f87171';
+    }
+  }
 });
 
 // Initialize on page load

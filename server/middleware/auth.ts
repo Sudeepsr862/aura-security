@@ -38,11 +38,15 @@ export function injectDb(db: Database.Database) {
   };
 }
 
-/** Require a valid demo session. Attaches demoUser to req. */
+/** Require a valid session or token. Attaches demoUser to req. */
 export function requireAuth(req: Request, res: Response, next: NextFunction) {
-  const raw = req.cookies?.aura_session as string | undefined;
+  // Support both HttpOnly cookie and Bearer token (critical for proxies, extensions, & API gateways)
+  const authHeader = req.headers.authorization;
+  const bearerToken = authHeader?.startsWith('Bearer ') ? authHeader.slice(7).trim() : undefined;
+  const raw = (req.cookies?.aura_session as string | undefined) || bearerToken;
+
   if (!raw) {
-    return res.status(401).json({ error: 'No session. Please sign in via the demo selector.' });
+    return res.status(401).json({ error: 'Authentication required. Please sign in.' });
   }
 
   const hash = hashToken(raw);
@@ -82,7 +86,7 @@ export function requireRole(...allowed: DemoRole[]) {
     }
     if (!allowed.includes(req.demoUser.role)) {
       return res.status(403).json({
-        error: `Your demo role (${req.demoUser.role}) cannot perform this action.`,
+        error: `Access restricted: Your role (${req.demoUser.role}) does not have permission to perform this action.`,
       });
     }
     next();

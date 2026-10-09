@@ -10,7 +10,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { api, type IncidentItem } from '../api/client';
-import { RiskBadge, DemoNotice, PageHeader, Section } from '../components/ui';
+import { RiskBadge, SecurityNotice, PageHeader, Section } from '../components/ui';
 
 export function Incidents() {
   const [incidents, setIncidents] = useState<IncidentItem[]>([]);
@@ -199,14 +199,12 @@ export function Incidents() {
     <>
       <PageHeader
         title="Incident Center"
-        subtitle="Review, investigate, and simulate local policy response workflows for elevated AI risks."
+        subtitle="Review, investigate, and manage policy response workflows for elevated AI risks."
       />
 
       <main className="page-body">
-        <DemoNotice
-          message={
-            'LOCAL DEMO SIMULATION — All response actions, employee warnings, approval flags, and block previews remain local simulations inside AURA. No traffic is blocked, no packets dropped, and no external emails or firewall rules are dispatched.'
-          }
+        <SecurityNotice
+          message="Active Incident Management: Review elevated AI risk events, investigate policy violations, record audit findings, and track resolution outcomes."
         />
 
         {/* Permission Banner for Viewer */}
@@ -898,7 +896,7 @@ export function Incidents() {
                     </form>
                   ) : (
                     <p className="text-xs text-muted">
-                      Sign in as demo-analyst or demo-admin to append notes to this record.
+                      Sign in as Security Analyst or Administrator to append notes to this record.
                     </p>
                   )}
                 </div>

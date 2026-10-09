@@ -65,19 +65,23 @@ export function StateBadge({ state }: StateBadgeProps) {
   return <span className={STATE_CLS[state]}>{state}</span>;
 }
 
-// ── Demo notice banner ────────────────────────────────────────────────────────
-interface DemoNoticeProps {
+// ── Security notice banner ────────────────────────────────────────────────────
+export interface SecurityNoticeProps {
   message: string;
+  type?: 'info' | 'shield' | 'alert';
 }
 
-export function DemoNotice({ message }: DemoNoticeProps) {
+export function SecurityNotice({ message, type = 'shield' }: SecurityNoticeProps) {
+  const icon = type === 'shield' ? '🛡️' : type === 'info' ? 'ℹ️' : '⚠️';
   return (
-    <div className="demo-notice" role="note" aria-label="Demo data notice">
-      <span className="demo-notice-icon" aria-hidden="true">⚠️</span>
-      <p className="demo-notice-text">{message}</p>
+    <div className="security-notice" role="status" aria-label="Security status notice">
+      <span className="security-notice-icon" aria-hidden="true">{icon}</span>
+      <p className="security-notice-text">{message}</p>
     </div>
   );
 }
+
+export const DemoNotice = SecurityNotice;
 
 // ── Risk score bar ────────────────────────────────────────────────────────────
 interface RiskScoreBarProps {

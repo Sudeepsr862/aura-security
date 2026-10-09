@@ -22,15 +22,15 @@ import { INTEGRATION_TILES } from '../mockData';
 import {
   StateBadge,
   WorkflowDiagram,
-  DemoNotice,
+  SecurityNotice,
   PageHeader,
   Section,
 } from '../components/ui';
 
 const TEAM_MEMBERS = [
   { initials: 'SR', name: 'Srujan', role: 'Team Leader' },
-  { initials: 'SS', name: 'Sudeep Sr', role: '— role to be defined —' },
-  { initials: 'TN', name: 'Thrishul N', role: '— role to be defined —' },
+  { initials: 'SS', name: 'Sudeep Sr', role: 'Security Architect' },
+  { initials: 'TN', name: 'Thrishul N', role: 'Full Stack Engineer' },
 ];
 
 const PRIVACY_ITEMS = [
@@ -238,14 +238,12 @@ export function Governance() {
     <>
       <PageHeader
         title="Governance & Policy Controls"
-        subtitle="Configurable risk policy rules, service approvals, tamper-evident audit history, and prototype boundaries."
+        subtitle="Configurable risk policy rules, service approvals, and tamper-evident audit history."
       />
 
       <main className="page-body">
-        <DemoNotice
-          message={
-            'LOCAL DEMO GOVERNANCE — Policies configured here govern future deterministic evaluations and simulations in AURA. Historical event scores and timestamps remain untouched. No external firewalls, devices, or APIs are modified.'
-          }
+        <SecurityNotice
+          message="Policy Governance & Compliance: Policies configured here govern deterministic risk evaluations across AURA. Historical event records remain audit-locked."
         />
 
         {/* ── 1. Administrator Policy Controls ────────────────────────────── */}
@@ -263,7 +261,7 @@ export function Governance() {
             >
               <div>
                 <h3 className="font-semibold text-md" style={{ color: 'var(--color-text)' }}>
-                  Demo Policy Configuration
+                  Enterprise Policy Configuration
                 </h3>
                 <p className="text-xs text-muted mt-1">
                   Tune risk engine thresholds, data weights, and volume anomaly limits.
@@ -625,7 +623,7 @@ export function Governance() {
                   </div>
                 ) : (
                   <p className="text-xs text-muted mt-2">
-                    Policy edits require administrator privileges. Sign in as <strong>demo-admin</strong> to modify thresholds.
+                    Policy edits require administrator privileges. Sign in as <strong>Administrator</strong> to modify thresholds.
                   </p>
                 )}
               </form>
@@ -953,12 +951,12 @@ export function Governance() {
               </div>
               <div className="confirm-body">
                 <p>
-                  Are you sure you want to update the risk intelligence thresholds and demo weights?
+                  Are you sure you want to update the risk intelligence thresholds and policy weights?
                 </p>
                 <ul className="text-xs text-muted mt-2" style={{ paddingLeft: '16px' }}>
                   <li>Score Thresholds: Medium ≥ {thresholds.medium_threshold}, High ≥ {thresholds.high_threshold}, Critical ≥ {thresholds.critical_threshold}</li>
                   <li>Volume Threshold: &gt; {volumeThresholdMb} MB</li>
-                  <li>Changes govern future demo evaluations. Historical event records remain unchanged.</li>
+                  <li>Changes govern future risk evaluations. Historical event records remain unchanged.</li>
                 </ul>
               </div>
               <div className="confirm-footer">

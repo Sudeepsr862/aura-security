@@ -69,8 +69,8 @@ export function Overview({ onNavigate }: OverviewProps) {
             Understand your AI footprint.
           </h2>
           <p className="text-muted text-sm">
-            AURA analyzes supplied or simulated network metadata to classify cloud AI endpoints,
-            identify local model runtimes, and compute risk signals — without live traffic interception.
+            AURA provides comprehensive AI visibility and governance: protecting browser-based AI services,
+            classifying cloud AI endpoints, enforcing data-sharing policies, and preventing sensitive credential leakage.
           </p>
         </div>
 

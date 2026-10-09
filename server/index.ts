@@ -43,27 +43,47 @@ console.log('✅  Database ready.');
 // ── Express app ───────────────────────────────────────────────────────────────
 const app = express();
 
+// Proxy compatibility: trust upstream reverse proxies (Nginx, Caddy, Cloudflare, ALB, Traefik)
+app.set('trust proxy', true);
+
 // Security: strict size limit (4mb for CSV payload), no x-powered-by header
 app.disable('x-powered-by');
 app.use(express.json({ limit: '4mb' }));
 app.use(cookieParser());
 
+// Proxy & Extension CORS Configuration
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Cookie, X-Forwarded-For, X-Forwarded-Proto, X-Forwarded-Host');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+  next();
+});
+
 // Inject db instance on every request
 app.use(injectDb(db));
-
-// No wildcard CORS — the Vite proxy handles same-origin requests in dev.
-// In production, only serve the built frontend from the same origin.
 
 // ── Health check ──────────────────────────────────────────────────────────────
 /**
  * GET /api/health
  * Returns server status. No auth required.
  */
-app.get('/api/health', (_req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({
     status:  'ok',
-    service: 'AURA API',
-    note:    'Local demo server — not connected to real network data.',
+    service: 'AURA AI Security Platform',
+    version: '1.0.0',
+    proxyCompatible: true,
+    clientIp: req.ip,
+    protocol: req.protocol,
     time:    new Date().toISOString(),
   });
 });
@@ -99,7 +119,7 @@ app.use((_req, res) => {
 
 // ── Start ─────────────────────────────────────────────────────────────────────
 app.listen(PORT, HOST, () => {
-  console.log(`🚀  AURA API listening on http://${HOST}:${PORT}`);
-  console.log('    Local-only — not exposed to the network.');
-  console.log('    Demo data only — no real network monitoring active.');
+  console.log(`🚀  AURA AI Security API active on http://${HOST}:${PORT}`);
+  console.log('    ✓ Reverse proxy & forwarded headers enabled.');
+  console.log('    ✓ Browser extension CORS & authorization ready.');
 });

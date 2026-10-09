@@ -19,7 +19,7 @@ import {
   type DatasetHistoryRecord,
   type DatasetIncidentRecord,
 } from '../api/client';
-import { RiskBadge, DemoNotice, PageHeader, Section } from '../components/ui';
+import { RiskBadge, SecurityNotice, PageHeader, Section } from '../components/ui';
 
 type ExtensionTab = 'live_events' | 'catalog' | 'dataset_history' | 'dataset_incidents' | 'test_sandbox';
 
@@ -190,7 +190,7 @@ export function ExtensionGuard() {
         </div>
       </PageHeader>
 
-      <DemoNotice message="Privacy Guarantee: The Chrome extension performs all regex detection locally in-memory inside the browser tab. Prompt texts, file contents, and secret values are never transmitted to the server or persisted to disk." />
+      <SecurityNotice message="Privacy Guarantee: The Chrome extension performs all pattern detection locally in-memory inside the browser tab. Prompt texts, file contents, and secret values are never transmitted to the server or persisted to disk." />
 
       {error && (
         <div className="banner banner-error" style={{ marginBottom: '16px' }}>

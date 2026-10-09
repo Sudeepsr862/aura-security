@@ -219,8 +219,8 @@ export function PromptLab() {
                       fontSize: '0.8rem',
                     }}
                   >
-                    🔒 <strong>Scan Restricted:</strong> Your demo role is <strong>Viewer</strong>. Viewers cannot run prompt scans.
-                    Switch your role to <strong>Administrator</strong> or <strong>Analyst</strong> in the sidebar to run scans.
+                    🔒 <strong>Scan Restricted:</strong> Your active role is <strong>Compliance Auditor</strong>. Read-only users cannot run prompt scans.
+                    Switch your role to <strong>Administrator</strong> or <strong>Security Analyst</strong> in the sidebar to run scans.
                   </div>
                 )}
 
