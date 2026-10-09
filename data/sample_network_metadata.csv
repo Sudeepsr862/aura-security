@@ -1,0 +1,19 @@
+timestamp,src_ip,device,user_email,domain_sni,dst_ip,dst_port,bytes_out,data_classification,authorization,anomaly,label,expected_provider,raw_prompt_payload
+2024-10-08T09:12:00Z,10.0.4.12,LAPTOP-DEV-01,alex.mercer@demo.aura,api.openai.com,104.18.7.192,443,14250,Confidential,true,false,ai,OpenAI,IGNORE_THIS_SECRET_PROMPT_1
+2024-10-08T09:18:22Z,10.0.4.15,MACBOOK-PRO-02,jordan.riley@demo.aura,chatgpt.com,104.18.6.192,443,28400,Internal,false,true,ai,OpenAI,IGNORE_THIS_SECRET_PROMPT_2
+2024-10-08T09:25:40Z,10.0.4.18,WORKSTATION-AI,sam.patel@demo.aura,localhost,127.0.0.1,11434,65000,Restricted,false,true,ai,Ollama,IGNORE_LOCAL_PROMPT
+2024-10-08T09:33:10Z,10.0.4.22,LAPTOP-MKT-04,casey.quinn@demo.aura,claude.ai,160.79.104.10,443,18900,Confidential,false,false,ai,Anthropic,IGNORE_CLAUDE_PROMPT
+2024-10-08T09:41:05Z,10.0.4.12,LAPTOP-DEV-01,alex.mercer@demo.aura,github.com,140.82.121.4,443,4500,Public,true,false,ordinary,,DO_NOT_STORE_CODE
+2024-10-08T09:48:50Z,10.0.4.30,DEV-DESKTOP-09,morgan.hayes@demo.aura,generativelanguage.googleapis.com,142.250.190.10,443,32000,Internal,true,false,ai,Google,IGNORE_GEMINI_API
+2024-10-08T09:55:12Z,10.0.4.15,MACBOOK-PRO-02,jordan.riley@demo.aura,127.0.0.1,127.0.0.1,1234,42000,Confidential,false,true,ai,LM Studio,IGNORE_LMSTUDIO_CALL
+2024-10-08T10:02:44Z,10.0.4.25,LAPTOP-SEC-01,taylor.brooks@demo.aura,huggingface.co,18.165.122.34,443,87000,Internal,true,false,ai,Hugging Face,IGNORE_HF_WEIGHTS
+2024-10-08T10:11:30Z,10.0.4.19,LAPTOP-OPS-03,chris.vance@demo.aura,api.mistral.ai,52.84.150.21,443,12100,Internal,false,false,ai,Mistral,IGNORE_MISTRAL_QUERY
+2024-10-08T10:19:15Z,10.0.4.40,FIN-WORKSTATION-01,pat.chen@demo.aura,contoso-prod.openai.azure.com,20.189.173.1,443,9800,Confidential,true,false,ai,Microsoft / Azure OpenAI,IGNORE_AZURE_PAYLOAD
+2024-10-08T10:27:00Z,10.0.4.12,LAPTOP-DEV-01,alex.mercer@demo.aura,stackoverflow.com,151.101.65.69,443,2100,Public,true,false,ordinary,,IGNORE_SO_SNIPPET
+2024-10-08T10:34:22Z,10.0.4.55,HR-LAPTOP-02,jamie.lee@demo.aura,api.perplexity.ai,104.18.22.88,443,8900,Confidential,false,true,ai,Perplexity,IGNORE_SEARCH_QUERY
+2024-10-08T10:42:10Z,10.0.4.18,WORKSTATION-AI,sam.patel@demo.aura,192.168.1.120,192.168.1.120,8000,51000,Restricted,false,false,ai,Unknown,IGNORE_INTERNAL_DEV
+2024-10-08T10:50:05Z,10.0.4.14,LAPTOP-QA-01,dana.scully@demo.aura,microsoft.com,20.112.52.29,443,3400,Public,true,false,ordinary,,IGNORE_DOCS_ACCESS
+2024-10-08T10:58:30Z,10.0.4.60,DEV-DESKTOP-11,fox.mulder@demo.aura,openai.com.attacker-test.org,198.51.100.42,443,11500,Internal,false,true,ordinary,,IGNORE_LOOKALIKE_TEST
+2024-10-08T11:05:15Z,10.0.4.70,UNKNOWN-HOST-99,guest.user@demo.aura,telemetry-metrics.internal.corp,10.0.99.12,9090,1200,Internal,true,false,ordinary,,IGNORE_METRICS_LOG
+2024-10-08T11:12:40Z,10.0.4.33,LAPTOP-MKT-08,alex.ross@demo.aura,slack.com,54.192.18.44,443,6200,Internal,true,false,ordinary,,IGNORE_SLACK_MSG
+2024-10-08T11:20:00Z,10.0.4.12,LAPTOP-DEV-01,alex.mercer@demo.aura,api.anthropic.com,160.79.104.10,443,15400,Confidential,true,false,ai,Anthropic,IGNORE_ANTHROPIC_CALL

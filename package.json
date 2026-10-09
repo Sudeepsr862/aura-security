@@ -1,0 +1,43 @@
+{
+  "name": "hackthon",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "tsx watch --tsconfig tsconfig.server.json server/index.ts",
+    "dev:all": "npm run dev:server & npm run dev",
+    "build": "tsc -b && vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "tsx server/tests/discovery.test.ts && tsx server/tests/api.test.ts && tsx server/tests/scanner.test.ts && tsx server/tests/promptLabApi.test.ts && tsx server/tests/riskEngine.test.ts && tsx server/tests/riskApi.test.ts && tsx server/tests/incidentPolicy.test.ts && tsx server/tests/dataGuard.test.ts",
+    "test:discovery": "tsx server/tests/discovery.test.ts",
+    "test:scanner": "tsx server/tests/scanner.test.ts && tsx server/tests/promptLabApi.test.ts",
+    "test:risk": "tsx server/tests/riskEngine.test.ts && tsx server/tests/riskApi.test.ts",
+    "test:incidents": "tsx server/tests/incidentPolicy.test.ts",
+    "test:dataguard": "tsx server/tests/dataGuard.test.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tsx": "^4.19.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
